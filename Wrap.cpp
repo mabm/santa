@@ -1,21 +1,11 @@
 //
-<<<<<<< HEAD
-// Wrap.cpp for  in /home/jobertomeu/Work/piscine_cpp/rush2
-// 
-// Made by Joris Bertomeu
-// Login   <jobertomeu@epitech.net>
-// 
-// Started on  Sat Jan 17 00:56:04 2015 Joris Bertomeu
-// Last update Sat Jan 17 12:38:16 2015 Joris Bertomeu
-=======
 // Wrap.cpp for  in /home/ades_n/PiscineCPP/santa
 //
 // Made by ades nicolas
 // Login   <ades_n@epitech.net>
 //
 // Started on  Sat Jan 17 12:36:34 2015 ades nicolas
-// Last update Sat Jan 17 12:36:35 2015 ades nicolas
->>>>>>> 4ab327fa7a272abace300f8be1d13fe8577dbb37
+// Last update Sat Jan 17 12:41:13 2015 Joris Bertomeu
 //
 
 #include	<iostream>
@@ -66,12 +56,7 @@ Object		*Wrap::MyUnitTests(Object **tab)
   std::cout << "Name : " << teddy->getTitle() << std::endl;
   
   std::cout << "[UnitTest -  1  ] DeGifting our present to get Toy Name :"
-<<<<<<< HEAD
-	    << (std::string) ((Teddy*) ((Box*) ((GiftPaper*) tab[2])->openMe())->openMe())->getTitle()
-	    << std::endl;
-=======
   	    << (std::string) ((AToy*) ((Box*) ((GiftPaper*) tab[2])->openMe())->openMe())->getTitle()
   	    << std::endl;
->>>>>>> 4ab327fa7a272abace300f8be1d13fe8577dbb37
   return (tab[2]);
 }
