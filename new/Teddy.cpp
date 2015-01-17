@@ -5,14 +5,14 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:29:58 2015 Joris Bertomeu
-// Last update Sat Jan 17 14:34:26 2015 Joris Bertomeu
+// Last update Sat Jan 17 15:05:40 2015 Joris Bertomeu
 //
 
 #include	"Teddy.hh"
 
 Teddy::Teddy(std::string name) : Toy(name, "Teddy")
 {
-  std::cout << "[INFO]\tNew Teddy Created !" << std::endl;
+  std::cout << "[INFO]\tNew Teddy \"" << name << "\" Created !" << std::endl;
 }
 
 Teddy::~Teddy()

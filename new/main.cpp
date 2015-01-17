@@ -15,7 +15,7 @@ int		main()
   tab[1] = (Object*) new Box();
   tab[2] = (Object*) new GiftPaper();
 
-  toy.MyUnitTests();
-  std::cout << "Test 2" << std::endl;
+  // toy.MyUnitTests();
+  // std::cout << "Test 2" << std::endl;
   present = (GiftPaper*) present->MyUnitTests(tab);
 }

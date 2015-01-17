@@ -7,14 +7,15 @@ SRC	=	Toy.cpp	\
 		main.cpp	\
 		ConvoyorBeltPePeNoel.cpp \
 		Object.cpp \
+		TablePePeNoel.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
 
 NAME	=	Santa
 
-CXFLAGS +=	-g -Wall -Wextra -Werror
+CXFLAGS +=	-g3 -Wall -Wextra -Werror
 
-CXX	=	clang++
+CXX	=	clang++ -g3
 
 RM	=	rm -rf
 
