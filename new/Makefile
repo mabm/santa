@@ -13,16 +13,16 @@ OBJ	=	$(SRC:.cpp=.o)
 
 NAME	=	Santa
 
-CXFLAGS +=	-g3 -Wall -Wextra -Werror
+XFLAGS +=	-g3 -Wall -Wextra -Werror
 
-CXX	=	clang++ -g3
+CXX	=	clang++
 
 RM	=	rm -rf
 
 all	:	$(NAME)
 
 $(NAME)	:	$(OBJ)
-		$(CXX) $(OBJ) -o $(NAME)
+		$(CXX) $(OBJ) -o $(NAME) $(XFLAGS)
 
 clean	:
 		$(RM) $(OBJ)
