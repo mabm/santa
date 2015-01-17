@@ -91,7 +91,7 @@ bool		ConveyorBeltPePeNoel::checkGift(Object * elem) const
   return true;
 }
 
-IConveyorBelt	*ConvoyorBeltPePeNoel::createConveyorBelt()
+IConveyorBelt	*ConveyorBeltPePeNoel::createConveyorBelt()
 {
-  return (new ConvoyorBeltPePeNoel());
+  return (new ConveyorBeltPePeNoel());
 }
