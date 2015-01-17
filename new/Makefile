@@ -1,4 +1,5 @@
 SRC	=	Toy.cpp	\
+		ElfOfPePeNoel.cpp \
 		Box.cpp		\
 		GiftPaper.cpp	\
 		LittlePony.cpp	\
@@ -7,7 +8,7 @@ SRC	=	Toy.cpp	\
 		main.cpp	\
 		ConveyorBeltPePeNoel.cpp \
 		Object.cpp \
-		TablePePeNoel.cpp
+		TablePePeNoel.cpp \
 
 OBJ	=	$(SRC:.cpp=.o)
 

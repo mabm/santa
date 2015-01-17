@@ -1,4 +1,5 @@
 #include	<iostream>
+#include	"ElfOfPePeNoel.hh"
 #include	"Toy.hh"
 #include	"Wrap.hh"
 #include	"GiftPaper.hh"
@@ -7,26 +8,29 @@
 #include	"TablePePeNoel.hh"
 #include	"ConveyorBeltPePeNoel.hh"
 
-void			TableUnitTest()
-{
-  TablePePeNoel		table;
-  ConveyorBeltPePeNoel	tapis;
-  Wrap			*wrapReturnedByTapis;
+// void			TableUnitTest()
+// {
+//   TablePePeNoel		table;
+//   ConveyorBeltPePeNoel	tapis;
+//   Wrap			*wrapReturnedByTapis;
 
-  tapis.Take();		//FALSE
-  tapis.pressOut();	//FALSE
-  tapis.pressIn();	//TRUE
-  table.Look();		//TRUE
-  table.putObject(tapis.Take());	//TRUE
-  tapis.Take();		//FALSE
-  tapis.pressIn();	//TRUE
-  table.Look();		//TRUE
-  table.takeObject();		//TRUE
-  table.Look();
-}
+//   tapis.Take();		//FALSE
+//   tapis.pressOut();	//FALSE
+//   tapis.pressIn();	//TRUE
+//   table.Look();		//TRUE
+//   table.putObject(tapis.Take());	//TRUE
+//   tapis.Take();		//FALSE
+//   tapis.pressIn();	//TRUE
+//   table.Look();		//TRUE
+//   table.takeObject();		//TRUE
+//   table.Look();
+// }
 
 int		main()
 {
+  ElfOfPePeNoel	elf("Tom");
+
+  elf.start();
   // Toy		toy("");
   // Object	**tab = new Object*[3];
   // GiftPaper	*present = new GiftPaper();
@@ -38,5 +42,5 @@ int		main()
   // // toy.MyUnitTests();
   // // std::cout << "Test 2" << std::endl;
   // present = (GiftPaper*) present->MyUnitTests(tab);
-  TableUnitTest();
+  //TableUnitTest();
 }
