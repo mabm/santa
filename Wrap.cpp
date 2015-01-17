@@ -1,11 +1,11 @@
 //
-// Wrap.cpp for  in /home/jobertomeu/Work/piscine_cpp/rush2
+// Wrap.cpp for  in /home/ades_n/PiscineCPP/santa
 //
-// Made by Joris Bertomeu
-// Login   <jobertomeu@epitech.net>
+// Made by ades nicolas
+// Login   <ades_n@epitech.net>
 //
-// Started on  Sat Jan 17 00:56:04 2015 Joris Bertomeu
-// Last update Sat Jan 17 12:18:30 2015 ades nicolas
+// Started on  Sat Jan 17 12:36:34 2015 ades nicolas
+// Last update Sat Jan 17 12:36:35 2015 ades nicolas
 //
 
 #include	<iostream>
@@ -14,6 +14,30 @@
 #include	"GiftPaper.hh"
 #include	"Box.hh"
 #include	"Teddy.hh"
+
+Wrap::Wrap()
+{
+  std::cout << "[INFO]\tCreating Wrap !" << std::endl;
+}
+
+Wrap::~Wrap()
+{
+  std::cout << "[INFO]\tDestroying Wrap !" << std::endl;
+}
+
+bool	Wrap::wrapMeThat(Object toWrap)
+{
+  if (!this->objectIn) {
+    this->objectIn = &toWrap;
+    return (true);
+  }
+  return (false);
+}
+
+Object	*Wrap::openMe()
+{
+  return (this->objectIn);
+}
 
 Object		*Wrap::MyUnitTests(Object **tab)
 {

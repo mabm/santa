@@ -1,11 +1,11 @@
 //
 // Teddy.hh for  in /home/jobertomeu/Work/piscine_cpp/rush2
-// 
+//
 // Made by Joris Bertomeu
 // Login   <jobertomeu@epitech.net>
-// 
+//
 // Started on  Fri Jan 16 23:23:30 2015 Joris Bertomeu
-// Last update Fri Jan 16 23:51:17 2015 Joris Bertomeu
+// Last update Sat Jan 17 11:18:56 2015 audisio romain
 //
 
 #ifndef		_TEDDY_HH_
@@ -16,8 +16,11 @@
 class Teddy : public AToy
 {
 public:
+
   explicit	Teddy(std::string title);
   virtual	~Teddy();
+
+  virtual void	isTaken() const;
 };
 
 #endif		/* _TEDDY_HH_ */

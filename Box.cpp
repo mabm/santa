@@ -1,11 +1,11 @@
 //
-// Box.cpp for  in /home/jobertomeu/Work/piscine_cpp/rush2
+// Box.cpp for  in /home/ades_n/PiscineCPP/santa
 //
-// Made by Joris Bertomeu
-// Login   <jobertomeu@epitech.net>
+// Made by ades nicolas
+// Login   <ades_n@epitech.net>
 //
-// Started on  Sat Jan 17 00:18:58 2015 Joris Bertomeu
-// Last update Sat Jan 17 12:25:37 2015 ades nicolas
+// Started on  Sat Jan 17 12:36:58 2015 ades nicolas
+// Last update Sat Jan 17 12:36:58 2015 ades nicolas
 //
 
 #include	"AToy.hh"
@@ -31,9 +31,11 @@ Box::~Box()
 
 bool	Box::wrapMeThat(Object toWrap)
 {
+  if (this->objectIn)
+    return (showError("[ERROR]\tBox containing already something !", false));
   if (!this->isOpened)
-    return (showError("[ERROR] Box must be opened !", false));
-  //showError("[INFO]\tWrapping object titled \"" << ((AToy) toWrap).getTitle() << \"", true);
+    return (showError("[ERROR]\tBox must be opened !", false));
+  //showError("[INFO]\tWrapping object titled \"" << toWrap->getTitle() << \"", true);
   this->objectIn = &toWrap;
   return (true);
 }

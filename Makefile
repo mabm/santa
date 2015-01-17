@@ -4,9 +4,10 @@
 ## Made by ades nicolas
 ## Login   <ades_n@epitech.net>
 ##
-## Started on  Sat Jan 17 10:24:32 2015 ades nicolas
-## Last update Sat Jan 17 12:03:54 2015 ades nicolas
+## Started on  Sat Jan 17 12:36:20 2015 ades nicolas
+## Last update Sat Jan 17 12:36:21 2015 ades nicolas
 ##
+
 
 SRC	=	AToy.cpp	\
 		Box.cpp		\
@@ -14,6 +15,7 @@ SRC	=	AToy.cpp	\
 		LittlePony.cpp	\
 		Teddy.cpp	\
 		Wrap.cpp	\
+		TablePePeNoel.cpp	\
 		main.cpp	\
 
 OBJ	=	$(SRC:.cpp=.o)
@@ -22,14 +24,14 @@ NAME	=	Santa
 
 CXFLAGS +=	-g -Wall -Wextra -Werror
 
-CCX	=	clang++
+CXX	=	clang++
 
 RM	=	rm -rf
 
 all	:	$(NAME)
 
 $(NAME)	:	$(OBJ)
-		$(CCX) $(OBJ) -o $(NAME)
+		$(CXX) $(OBJ) -o $(NAME)
 
 clean	:
 		$(RM) $(OBJ)

@@ -1,18 +1,18 @@
 //
-// GiftPaper.cpp for  in /home/jobertomeu/Work/piscine_cpp/rush2
+// GiftPaper.cpp for  in /home/ades_n/PiscineCPP/santa
 //
-// Made by Joris Bertomeu
-// Login   <jobertomeu@epitech.net>
+// Made by ades nicolas
+// Login   <ades_n@epitech.net>
 //
-// Started on  Sat Jan 17 00:45:34 2015 Joris Bertomeu
-// Last update Sat Jan 17 11:33:08 2015 ades nicolas
+// Started on  Sat Jan 17 12:36:44 2015 ades nicolas
+// Last update Sat Jan 17 12:36:44 2015 ades nicolas
 //
 
 #include	"GiftPaper.hh"
 
 GiftPaper::GiftPaper()
 {
-  std::cout << "[LOG] New GiftPaper created !" << std::endl;
+  std::cout << "[LOG]\tNew GiftPaper created !" << std::endl;
 }
 
 GiftPaper::~GiftPaper()
@@ -22,6 +22,8 @@ GiftPaper::~GiftPaper()
 
 bool	GiftPaper::wrapMeThat(Object toWrap)
 {
+  if (this->objectIn)
+    std::cerr << "[Error]\tGift Paper containing alreay something !" << std::endl;
   this->objectIn = &toWrap;
   return (true);
 }
