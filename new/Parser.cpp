@@ -5,51 +5,75 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 19:30:36 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 21:38:56 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 23:51:05 2015 Viveka BARNEAUD
 //
 
 #include	<iostream>
 #include	<fstream>
+#include	"ParserXML.hh"
 
-void		createXML(Object *o)
+ParserXML::ParserXML()
 {
-  static int	i = 1;
-  std::ostream	file("gift"+1+".xml");
-
-  if (!file.is_open())
-    {
-      std::cerr << "\033[31m[ERROR]\tCannot open the XML file !\033[0m" << std::endl;
-      return;
-    }
-  file << "<gift>" << std::endl;
-  file << "\t<box>" << std::endl;
-  file << "\t\t<toy type=\"" << ((Toy *) o->getType()) << "\">" << ((Toy *) o->getTitle()) << "</toy>" << std::endl;
-  file << "\t</box>" << std::endl;
-  file << "</gift>" << std::endl;
-  i++;
-  file.close();
 }
 
-std::string	getXMLbuffer(std::string const& filename)
+ParserXML::~ParserXML()
 {
-  std::ifstream	file(filename.c_str());
-  std::string	buffer;
+  this->CloseFile();
+}
+
+bool		ParserXML::OpenFile(std::string const& filename)
+{
+  this->CloseFile();
+  this->_file.open(filename.c_str());
+  if (!this->_file)
+    {
+      std::cerr << "\033[31m[ERROR]\tCannot open the XML file : " << filename << " !\033[0m" << std::endl;
+      return (false);
+    }
+  return (true);
+}
+
+void		ParserXML::CloseFile()
+{
+  if (this->_file)
+    this->_file.close();
+}
+
+void		ParserXML::Serialize(GiftPaper *gift)
+{
+  this->_file << "<GiftPaper>" << std::endl;
+  this->_file << "\t<box>" << std::endl;
+  this->_file << "\t\t<toy type=\"" << ((Toy *) o->getType()) << "\">" << ((Toy *) o->getTitle()) << "</toy>" << std::endl;
+  this->_file << "\t</box>" << std::endl;
+  this->_file << "</GiftPaper>" << std::endl;
+}
+
+bool		ParserXML::getXMLbuffer()
+{
   char		a;
 
-  if (file == NULL)
-    {
-      std::cerr << filename << " : No such file or directory" << std::endl;
-      return ("");
-    }
-  while (file.get(a))
-    buffer.push_back(a);
-  return (buffer);
+  while (this->_file.get(a))
+   this->_buffer.push_back(a);
+  return (true);
 }
 
-Object		*getObject(std::string const& buffer)
+GiftPaper	**ParserXML::DeSerialize()
 {
-  Object	*ret;
-  std::string	title;
-  std::string	type;
+  GiftPaper	*ret = new GiftPaper()[this->CountGifts + 1];
 
+  
+  return (ret);
+}
+
+int		ParserXML::CountGifts() const
+{
+  int		count = 0;
+  int		pos = 0;
+
+  while (pos <= this->_buffer.npos)
+    {
+      if (pos = this->_buffer.find("<GiftPaper>", pos) != this->_buffer.npos)
+	count++;
+    }
+  return (count);
 }
