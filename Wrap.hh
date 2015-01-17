@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 // 
 // Started on  Sat Jan 17 00:13:03 2015 Joris Bertomeu
-// Last update Sat Jan 17 11:56:14 2015 Joris Bertomeu
+// Last update Sat Jan 17 12:45:09 2015 Joris Bertomeu
 //
 
 #ifndef		_WRAP_H_
