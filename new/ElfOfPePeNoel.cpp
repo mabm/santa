@@ -5,7 +5,7 @@
 // Login   <ades_n@epitech.net>
 //
 // Started on  Sat Jan 17 17:46:21 2015 ades nicolas
-// Last update Sat Jan 17 20:15:33 2015 Joris Bertomeu
+// Last update Sat Jan 17 20:51:51 2015 Joris Bertomeu
 //
 
 #include	"ElfOfPePeNoel.hh"
@@ -41,16 +41,24 @@ void			ElfOfPePeNoel::start()
   ConveyorBeltPePeNoel	tapis;
   Box			*box;
   
-  
   table.Look();
-  box = ((Box*) table.takeObject(0));
+  if (!(box = ((Box*) table.takeObject(0)))) {
+    std::cerr << "\033[31m[ERROR]\tBox NULL\033[0m" << std::endl;
+    return;
+  }
   box->openMe();
-  if (box->wrapMeThat((Object)*(new Teddy("Joris"))))
+  if (box->wrapMeThat((Object)*(table.takeObject(4))))
     ((GiftPaper*) table.takeObject(2))->wrapMeThat(*box);  
-
-  box = ((Box*) table.takeObject(1));
+  tapis.Put(box);
+  tapis.pressOut();
+  if (!(box = ((Box*) table.takeObject(1)))) {
+    std::cerr << "\033[31m[ERROR]\tBox NULL\033[0m" << std::endl;
+    return;
+  }
   box->openMe();
-  if (box->wrapMeThat((Object)*(new Teddy("Joris"))))
+  if (box->wrapMeThat((Object)*(table.takeObject(5))))
     ((GiftPaper*) table.takeObject(3))->wrapMeThat(*box);  
+  tapis.Put(box);
+  tapis.pressOut();
   table.Look();
 }

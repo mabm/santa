@@ -16,7 +16,7 @@ NAME	=	Santa
 
 XFLAGS +=	-g3 -Wall -Wextra -Werror
 
-CXX	=	clang++
+CXX	=	clang++ -g3
 
 RM	=	rm -rf
 
