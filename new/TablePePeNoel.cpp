@@ -9,7 +9,7 @@ TablePePeNoel::TablePePeNoel()
 {
   int		i = 0;
 
-  while (i != 10)
+  while (i != 11)
     {
       this->_stack[i] = NULL;
       i++;
@@ -27,7 +27,7 @@ TablePePeNoel::TablePePeNoel(TablePePeNoel const& other)
 {
   int		i = 0;
 
-  while (i != 10)
+  while (i != 11)
     {
       this->_stack[i] = other._stack[i];
       i++;
@@ -50,7 +50,7 @@ TablePePeNoel	&TablePePeNoel::operator=(TablePePeNoel const& other)
 {
   int		i = 0;
 
-  while (i != 10)
+  while (i != 11)
     {
       this->_stack[i] = other._stack[i];
       i++;
@@ -107,7 +107,7 @@ Object		*TablePePeNoel::takeObject()
 std::string	*TablePePeNoel::Look() const
 {
   int		i;
-  std::string	**ret = new std::string*[10];
+  std::string	**ret = new std::string*[11];
 
   i = 0;
   while (i != 10)
