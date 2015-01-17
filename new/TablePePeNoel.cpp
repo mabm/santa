@@ -1,26 +1,15 @@
 //
 // TablePePeNoel.cpp for TablePePeNoel in /home/barnea_v/rendu/santa
-// 
+//
 // Made by Viveka BARNEAUD
 // Login   <barnea_v@epitech.net>
-// 
+//
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-<<<<<<< HEAD
-// Last update Sat Jan 17 16:20:29 2015 Joris Bertomeu
-=======
-// Last update Sat Jan 17 16:02:52 2015 Viveka BARNEAUD
->>>>>>> e20ca9e9d6a0f40147eccbd768d75cfb7778cc94
-// Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 16:43:20 2015 ades nicolas
 //
 
 #include	<iostream>
 #include	"TablePePeNoel.hh"
-<<<<<<< HEAD
-#include	"Toy.hh"
-#include	<iostream>
-#include	"TablePePeNoel.hh"
-=======
->>>>>>> e20ca9e9d6a0f40147eccbd768d75cfb7778cc94
 #include	"Toy.hh"
 
 TablePePeNoel::TablePePeNoel()
@@ -30,7 +19,7 @@ TablePePeNoel::TablePePeNoel()
   while (i != 10)
     {
       this->_stack[i] = NULL;
-      i++; 
+      i++;
     }
 }
 
