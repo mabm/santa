@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:19:18 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 15:49:19 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 16:00:01 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 12:28:54 2015 Viveka BARNEAUD
 //
 
@@ -21,7 +21,7 @@ public:
   virtual bool	putObject(Object *o) = 0;
   virtual Object *takeObject(int idx) = 0;
   virtual Object *takeObject() = 0;
-  virtual void	Look() const = 0;
+  virtual std::string	*Look() const = 0;
   virtual void	Look(int x) const = 0;
 };
 
