@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 // 
 // Started on  Sat Jan 17 00:18:58 2015 Joris Bertomeu
-// Last update Sat Jan 17 11:03:45 2015 Joris Bertomeu
+// Last update Sat Jan 17 11:07:37 2015 Joris Bertomeu
 //
 
 #include	"AToy.hh"
@@ -33,7 +33,7 @@ bool	Box::wrapMeThat(Object toWrap)
 {
   if (!this->isOpened)
     return (showError("[ERROR] Box must be opened !", false));
-  showError("[INFO]\tWrapping object titled \"" << ((AToy) toWrap).getTitle() << \"", true);
+  //showError("[INFO]\tWrapping object titled \"" << ((AToy) toWrap).getTitle() << \"", true);
   this->objectIn = &toWrap;
   return (true);
 }
