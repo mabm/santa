@@ -1,11 +1,11 @@
 //
 // AToy.cpp for  in /home/jobertomeu/Work/piscine_cpp/rush2
-// 
+//
 // Made by Joris Bertomeu
 // Login   <jobertomeu@epitech.net>
-// 
+//
 // Started on  Fri Jan 16 23:26:36 2015 Joris Bertomeu
-// Last update Sat Jan 17 00:10:22 2015 Joris Bertomeu
+// Last update Sat Jan 17 12:26:52 2015 ades nicolas
 //
 
 #include	"AToy.hh"
