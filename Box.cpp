@@ -1,12 +1,3 @@
-//
-// Box.cpp for  in /home/jobertomeu/Work/piscine_cpp/rush2
-//
-// Made by Joris Bertomeu
-// Login   <jobertomeu@epitech.net>
-//
-// Started on  Sat Jan 17 00:18:58 2015 Joris Bertomeu
-// Last update Sat Jan 17 12:06:08 2015 audisio romain
-//
 
 #include	"AToy.hh"
 #include	"Box.hh"

@@ -1,13 +1,3 @@
-##
-## Makefile for  in /home/ades_n/PiscineCPP/santa
-##
-## Made by ades nicolas
-## Login   <ades_n@epitech.net>
-##
-## Started on  Sat Jan 17 10:24:32 2015 ades nicolas
-## Last update Sat Jan 17 10:31:42 2015 ades nicolas
-##
-
 SRC	=	AToy.cpp	\
 		Box.cpp		\
 		GiftPaper.cpp	\
@@ -15,21 +5,22 @@ SRC	=	AToy.cpp	\
 		Teddy.cpp	\
 		Wrap.cpp	\
 		main.cpp	\
+		ConvoyorBeltPePeNoel.cpp \
 
 OBJ	=	$(SRC:.cpp=.o)
 
 NAME	=	Santa
 
-CXFLAGS +=	-Wall -Wextra -Werror
+CXFLAGS +=	-g -Wall -Wextra -Werror
 
-CCX	=	clang++
+CXX	=	clang++
 
 RM	=	rm -rf
 
 all	:	$(NAME)
 
 $(NAME)	:	$(OBJ)
-		$(CCX) $(OBJ) -o $(NAME)
+		$(CXX) $(OBJ) -o $(NAME)
 
 clean	:
 		$(RM) $(OBJ)
@@ -37,6 +28,6 @@ clean	:
 fclean	:	clean
 		$(RM) $(NAME)
 
-re	:	fclean re
+re	:	fclean all
 
 .PHONY	:	all clean fclean re

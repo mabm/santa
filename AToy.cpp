@@ -1,11 +1,11 @@
 //
 // AToy.cpp for  in /home/jobertomeu/Work/piscine_cpp/rush2
-// 
+//
 // Made by Joris Bertomeu
 // Login   <jobertomeu@epitech.net>
-// 
+//
 // Started on  Fri Jan 16 23:26:36 2015 Joris Bertomeu
-// Last update Sat Jan 17 00:10:22 2015 Joris Bertomeu
+// Last update Sat Jan 17 12:40:18 2015 Joris Bertomeu
 //
 
 #include	"AToy.hh"
@@ -53,4 +53,9 @@ Object	**AToy::MyUnitTests()
   std::cout << "[UnitTest - PAS1]\tTeddy's name : " << ((Teddy*) tab[0])->getTitle() << std::endl;
   std::cout << "[UnitTest - PAS1]\tLittlePony's name : " << ((LittlePony*) tab[1])->getTitle() << std::endl;
   return (tab);
+}
+
+void		AToy::isTaken() const
+{
+
 }
