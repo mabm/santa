@@ -5,12 +5,12 @@
 #include	"Box.hh"
 #include	"Teddy.hh"
 #include	"TablePePeNoel.hh"
-#include	"ConvoyorBeltPePeNoel.hh"
+#include	"ConveyorBeltPePeNoel.hh"
 
 void			TableUnitTest()
 {
   TablePePeNoel		table;
-  ConvoyorBeltPePeNoel	tapis;
+  ConveyorBeltPePeNoel	tapis;
   Wrap			*wrapReturnedByTapis;
 
   tapis.Take();		//FALSE

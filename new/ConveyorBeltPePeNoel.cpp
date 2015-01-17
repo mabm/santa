@@ -1,20 +1,20 @@
 #include	<cstdlib>
 #include	"Box.hh"
 #include	"GiftPaper.hh"
-#include	"ConvoyorBeltPePeNoel.hh"
+#include	"ConveyorBeltPePeNoel.hh"
 
-ConvoyorBeltPePeNoel::ConvoyorBeltPePeNoel()
+ConveyorBeltPePeNoel::ConveyorBeltPePeNoel()
 {
   this->object = NULL;
   std::cout << "\033[36m[INFO]\tBuilding ConvoyerBelt !\033[0m" << std::endl;
 }
 
-ConvoyorBeltPePeNoel::~ConvoyorBeltPePeNoel()
+ConveyorBeltPePeNoel::~ConveyorBeltPePeNoel()
 {
   std::cout << "\033[36m[INFO]\tDestroying ConvoyerBelt !\033[0m" << std::endl;
 }
 
-Wrap		*ConvoyorBeltPePeNoel::Take()
+Wrap		*ConveyorBeltPePeNoel::Take()
 {
   Wrap		*ret;
 
@@ -27,7 +27,7 @@ Wrap		*ConvoyorBeltPePeNoel::Take()
   return (NULL);
 }
 
-bool		ConvoyorBeltPePeNoel::Put(Object *_object)
+bool		ConveyorBeltPePeNoel::Put(Object *_object)
 {
   if (this->object)
     {
@@ -38,7 +38,7 @@ bool		ConvoyorBeltPePeNoel::Put(Object *_object)
   return (false);
 }
 
-void		ConvoyorBeltPePeNoel::pressIn()
+void		ConveyorBeltPePeNoel::pressIn()
 {
   int		_random = random() % 2;
 
@@ -49,7 +49,7 @@ void		ConvoyorBeltPePeNoel::pressIn()
   std::cout << "\033[36m[INFO]\tPressing IN ..\033[0m" << std::endl;
 }
 
-void		ConvoyorBeltPePeNoel::pressOut()
+void		ConveyorBeltPePeNoel::pressOut()
 {
   if (!this->object) {
     std::cerr << "\033[31m[ERROR]\tNoting put on ConveyorBelt\033[0m" << std::endl;
@@ -60,32 +60,32 @@ void		ConvoyorBeltPePeNoel::pressOut()
   this->object = NULL;
 }
 
-bool		ConvoyorBeltPePeNoel::checkGift(Object * elem) const
+bool		ConveyorBeltPePeNoel::checkGift(Object * elem) const
 {
   if (!elem->getName().compare("GiftPaper"))
     {
-      std::cerr << "[ERROR]\tGiftPaper isn't present." << std::endl;
+      std::cerr << "\033[31m[ERROR]\tGiftPaper isn't present." << std::endl;
       return false;
     }
   if ((((Wrap*)elem)->takeMe()) == NULL)
     {
-      std::cerr << "[ERROR]\tGiftPaper is empty." << std::endl;
+      std::cerr << "\033[31m[ERROR]\tGiftPaper is empty." << std::endl;
       return false;
     }
   if (!((Wrap*)elem)->takeMe()->getName().compare("Box"))
     {
-      std::cerr << "[ERROR]\tBox isn't present." << std::endl;
+      std::cerr << "\033[31m[ERROR]\tBox isn't present." << std::endl;
       return false;
     }
   if (((Box*)((Wrap*)elem)->takeMe())->takeMe() == NULL)
     {
-      std::cerr << "[ERROR]\tBox is empty." << std::endl;
+      std::cerr << "\033[31m[ERROR]\tBox is empty." << std::endl;
       return false;
     }
   if (!((Box*)((Wrap*)elem)->takeMe())->takeMe()->getName().compare("Teddy") ||
       !((Box*)((Wrap*)elem)->takeMe())->takeMe()->getName().compare("LittlePony") )
     {
-      std::cerr << "[ERROR]\tToy isn't present." << std::endl;
+      std::cerr << "\033[31m[ERROR]\tToy isn't present." << std::endl;
       return false;
     }
   return true;

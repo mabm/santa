@@ -34,7 +34,7 @@ bool	Box::wrapMeThat(Object toWrap)
 void	Box::openMe()
 {
   if (this->isOpened)
-    std::cout << "\033[35m[Warning]\tBox already opened !\033[0m" << std::endl;
+    std::cout << "\033[35m[WARNING]\tBox already opened !\033[0m" << std::endl;
   this->isOpened = true;
   std::cout << "\033[36m[Info]\tBox opened\033[36m" << std::endl;
 }
@@ -42,7 +42,7 @@ void	Box::openMe()
 void	Box::closeMe()
 {
   if (!this->isOpened)
-    std::cout << "\033[35m[Warning]\tBox already closed !\033[0m" << std::endl;
+    std::cout << "\033[35m[WARNING]\tBox already closed !\033[0m" << std::endl;
   this->isOpened = false;
   std::cout << "\033[35m[Info]\tBox closed\033[0m" << std::endl;
 }
