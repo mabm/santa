@@ -46,6 +46,18 @@ TablePePeNoel::~TablePePeNoel()
     }
 }
 
+int		TablePePeNoel::getFirst(Object *obj)
+{
+  int		i = 0;
+
+  while (i != 10)
+    {
+      if (this->_stack[i]->getTitle().compare(obj->getTitle()) == 0)
+	return (i);
+      i++;
+    }
+  return (-1);
+}
 
 TablePePeNoel	&TablePePeNoel::operator=(TablePePeNoel const& other)
 {
@@ -124,8 +136,8 @@ std::string	*TablePePeNoel::Look() const
 	}
       else
 	{
-	  std::cout << "[LOOK]\t" << i << " : " << ((Toy*)this->_stack[i])->getTitle() << std::endl;
-	  ret[i] = new std::string(((Toy*)this->_stack[i])->getTitle());
+	  std::cout << "[LOOK]\t" << i << " : " << this->_stack[i]->getTitle() << std::endl;
+	  ret[i] = new std::string(this->_stack[i]->getTitle());
 	}
       i++;
     }
@@ -138,7 +150,7 @@ void		TablePePeNoel::Look(int idx) const
   if (idx < 0 || idx >= 10 || this->_stack[idx] == NULL)
     std::cout << "[LOOK]\t" << "Slot " << idx << " is empty." << std::endl;
   else
-    std::cout << "[LOOL]\tSlot " << idx << " contains " << ((Toy*)this->_stack[idx])->getTitle() << std::endl;
+    std::cout << "[LOOL]\tSlot " << idx << " contains " << this->_stack[idx]->getTitle() << std::endl;
 }
 
 ITable		*TablePePeNoel::createTable()

@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:19:18 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 21:22:45 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 21:28:49 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 12:28:54 2015 Viveka BARNEAUD
 //
 
@@ -18,6 +18,7 @@ class		ITable
 {
 public:
   virtual ~ITable() {}
+  virtual int	getFirst(Object *obj) = 0;
   virtual bool	putObject(Object *o) = 0;
   virtual Object *takeObject(int idx) = 0;
   virtual Object *takeObject() = 0;
