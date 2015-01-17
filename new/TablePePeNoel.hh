@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:47:24 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 15:57:34 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 16:40:32 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 12:28:37 2015 Viveka BARNEAUD
 //
 
@@ -28,6 +28,7 @@ public:
   Object	*takeObject();
   std::string	*Look() const;
   void		Look(int idx) const;
+  ITable	*createTable();
 };
 
 #endif		/* TABLEPEPENOEL_HH_ */

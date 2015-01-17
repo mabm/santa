@@ -5,13 +5,16 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 16:02:52 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 17:57:31 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
 //
 
 #include	<iostream>
 #include	"TablePePeNoel.hh"
-#include	"Toy.hh"
+#include	"Box.hh"
+#include	"Teddy.hh"
+#include	"LittlePony.hh"
+#include	"GiftPaper.hh"
 
 TablePePeNoel::TablePePeNoel()
 {
@@ -22,6 +25,14 @@ TablePePeNoel::TablePePeNoel()
       this->_stack[i] = NULL;
       i++; 
     }
+  std::cout << "Initialization of the table :" << std::endl;
+  this->putObject(new Box());
+  this->putObject(new Box());
+  this->putObject(new GiftPaper());
+  this->putObject(new GiftPaper());
+  this->putObject(new LittlePony("Little Pony"));
+  this->putObject(new Teddy("Teddy"));
+  std::cout << "The table is ready to make 2 gifts." << std::endl;
 }
 
 TablePePeNoel::TablePePeNoel(TablePePeNoel const& other)
@@ -68,10 +79,12 @@ bool		TablePePeNoel::putObject(Object *o)
       if (this->_stack[i] == NULL)
 	{
 	  this->_stack[i] = o;
+	  std::cout << "Putting the object in the slot " << i << std::endl;
 	  return (true);
 	}
       i++;
     }
+  std::cerr << "The table is already full : you can't put your object on it." << std::endl;
   return (false);
 }
 
@@ -131,3 +144,8 @@ void		TablePePeNoel::Look(int idx) const
   else
     std::cout << "Slot " << idx << " contains " << ((Toy*)this->_stack[idx])->getTitle() << std::endl;
 }
+
+// ITable		*TablePePeNoel::createTable()
+// {
+//   return (new ITable());
+// }
