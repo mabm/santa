@@ -16,10 +16,13 @@ void			TableUnitTest()
   tapis.Take();		//FALSE
   tapis.pressOut();	//FALSE
   tapis.pressIn();	//TRUE
+  table.Look();		//TRUE
   table.putObject(tapis.Take());	//TRUE
   tapis.Take();		//FALSE
   tapis.pressIn();	//TRUE
   table.Look();		//TRUE
+  table.takeObject();		//TRUE
+  table.Look();
 }
 
 int		main()

@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 // 
 // Started on  Sat Jan 17 11:51:55 2015 Joris Bertomeu
-// Last update Sat Jan 17 17:36:41 2015 Joris Bertomeu
+// Last update Sat Jan 17 18:34:54 2015 Joris Bertomeu
 //
 
 #include	<cstdlib>
@@ -16,12 +16,12 @@
 ConvoyorBeltPePeNoel::ConvoyorBeltPePeNoel()
 {
   this->object = NULL;
-  std::cout << "[INFO]\tBuilding ConvoyerBelt !" << std::endl;
+  std::cout << "\033[36m[INFO]\tBuilding ConvoyerBelt !\033[0m" << std::endl;
 }
 
 ConvoyorBeltPePeNoel::~ConvoyorBeltPePeNoel()
 {
-  std::cout << "[INFO]\tDestroying ConvoyerBelt !" << std::endl;
+  std::cout << "\033[36m[INFO]\tDestroying ConvoyerBelt !\033[0m" << std::endl;
 }
 
 Wrap		*ConvoyorBeltPePeNoel::Take()
@@ -33,7 +33,7 @@ Wrap		*ConvoyorBeltPePeNoel::Take()
     this->object = NULL;
     return (ret);
   }
-  std::cout << "[ERROR]\tCan't return wrapper 'cause there is no object on ConveyorBelt !" << std::endl;
+  std::cout << "\033[31m[ERROR]\tCan't return wrapper 'cause there is no object on ConveyorBelt !\033[0m" << std::endl;
   return (NULL);
 }
 
@@ -41,10 +41,10 @@ bool		ConvoyorBeltPePeNoel::Put(Object *_object)
 {
   if (this->object)
     {
-      std::cout << "[ERROR]\tCan't put object on ConveyorBelt 'cause there is already an object" << std::endl;
+      std::cerr << "\033[31m[ERROR]\tCan't put object on ConveyorBelt 'cause there is already an object\033[0m" << std::endl;
       return (false);
     }
-  std::cout << "[INFO]\tPutting object on ConveyorBelt" << std::endl;
+  std::cout << "\033[36m[INFO]\tPutting object on ConveyorBelt\033[0m" << std::endl;
   return (false);
 }
 
@@ -56,16 +56,16 @@ void		ConvoyorBeltPePeNoel::pressIn()
     this->object = new GiftPaper;
   else
     this->object = new Box;
-  std::cout << "[INFO]\tPressing IN .." << std::endl;
+  std::cout << "\033[36m[INFO]\tPressing IN ..\033[0m" << std::endl;
 }
 
 void		ConvoyorBeltPePeNoel::pressOut()
 {
   if (!this->object) {
-    std::cerr << "[ERROR]\tNoting put on ConveyorBelt" << std::endl;
+    std::cerr << "\033[31m[ERROR]\tNoting put on ConveyorBelt\033[0m" << std::endl;
     return;
   }
-  std::cout << "[INFO]\tPressing Out .." << std::endl;
+  std::cout << "\033[36m[INFO]\tPressing Out ..\033[0m" << std::endl;
   delete this->object;
   this->object = NULL;
 }

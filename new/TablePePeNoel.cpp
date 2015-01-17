@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 //
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 18:12:06 2015 Joris Bertomeu
+// Last update Sat Jan 17 18:29:31 2015 Joris Bertomeu
 // Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 16:43:20 2015 ades nicolas
 //
@@ -85,7 +85,7 @@ bool		TablePePeNoel::putObject(Object *o)
 	}
       i++;
     }
-  std::cerr << "[ERROR]\tThe table is already full : you can't put your object on it." << std::endl;
+  std::cerr << "\033[31m[ERROR]\tThe table is already full : you can't put your object on it\033[0m" << std::endl;
   return (false);
 }
 
@@ -93,7 +93,7 @@ Object		*TablePePeNoel::takeObject(int idx)
 {
   if (idx < 0 || idx >= 10 || this->_stack[idx] == NULL)
     {
-      std::cerr << "[ERROR]\tNo such object at index " << idx << "." << std::endl;
+      std::cerr << "\033[31m[ERROR]\tNo such object at index " << idx << "\033[0m" << std::endl;
       return (NULL);
     }
   return (this->_stack[idx]);
