@@ -31,4 +31,5 @@ Object&			Object::operator=(Object const & elem)
 {
   _type = elem.getTitle();
   _name = elem.getName();
+  return *this;
 }
