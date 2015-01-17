@@ -1,4 +1,5 @@
 #include	<cstdlib>
+#include	<sys/time.h>
 #include	"Box.hh"
 #include	"GiftPaper.hh"
 #include	"ConveyorBeltPePeNoel.hh"
@@ -34,14 +35,19 @@ bool		ConveyorBeltPePeNoel::Put(Object *_object)
       std::cerr << "\033[31m[ERROR]\tCan't put object on ConveyorBelt 'cause there is already an object\033[0m" << std::endl;
       return (false);
     }
+  this->object = (Wrap*) _object;
   std::cout << "\033[36m[INFO]\tPutting object on ConveyorBelt\033[0m" << std::endl;
   return (false);
 }
 
 void		ConveyorBeltPePeNoel::pressIn()
 {
-  int		_random = random() % 2;
-
+  int		_random;
+  static	int toto = 0;
+  
+  srand(toto);
+  _random = rand() % 2;
+  toto++;
   if (_random == 0)
     this->object = new GiftPaper;
   else

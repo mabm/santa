@@ -5,12 +5,12 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:29:58 2015 Joris Bertomeu
-// Last update Sat Jan 17 18:53:17 2015 Joris Bertomeu
+// Last update Sat Jan 17 22:15:21 2015 Joris Bertomeu
 //
 
 #include	"LittlePony.hh"
 
-LittlePony::LittlePony(std::string name) : Toy(name, "LittlePony")
+LittlePony::LittlePony(std::string name) : Toy(name, "Toy")
 {
   std::cout << "\033[36m[INFO]\tNew LittlePony Created !\033[0m" << std::endl;
 }
