@@ -11,10 +11,15 @@ void			TableUnitTest()
 {
   TablePePeNoel		table;
   ConvoyorBeltPePeNoel	tapis;
-  
+  Wrap			*wrapReturnedByTapis;
+
   tapis.Take();		//FALSE
   tapis.pressOut();	//FALSE
-  tapis.pressIn();	//TRUE;
+  tapis.pressIn();	//TRUE
+  table.putObject(tapis.Take());	//TRUE
+  tapis.Take();		//FALSE
+  tapis.pressIn();	//TRUE
+  table.Look();		//TRUE
 }
 
 int		main()
