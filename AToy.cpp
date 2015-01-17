@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:26:36 2015 Joris Bertomeu
-// Last update Sat Jan 17 12:40:18 2015 Joris Bertomeu
+// Last update Sat Jan 17 14:23:28 2015 audisio romain
 //
 
 #include	"AToy.hh"
