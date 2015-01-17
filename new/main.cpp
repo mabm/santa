@@ -19,7 +19,7 @@ void			TableUnitTest()
   table.putObject(tapis.Take());	//TRUE
   tapis.Take();		//FALSE
   tapis.pressIn();	//TRUE
-  
+  table.Look();		//TRUE
 }
 
 int		main()

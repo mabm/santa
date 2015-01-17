@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 //
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 18:04:17 2015 Joris Bertomeu
+// Last update Sat Jan 17 18:12:06 2015 Joris Bertomeu
 // Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 16:43:20 2015 ades nicolas
 //
@@ -117,25 +117,26 @@ Object		*TablePePeNoel::takeObject()
 std::string	*TablePePeNoel::Look() const
 {
   int		i;
-  std::string	*ret = new std::string[10];
+  std::string	**ret = new std::string*[10];
 
   i = 0;
   while (i != 10)
     {
       if (this->_stack[i] == NULL)
 	{
-	  ret[i] = "empty";
+	  ret[i] = new std::string("empty");
+	  //ret[i] = "empty";
 	  std::cout << "[LOOK]\t" << i << " : empty" << std::endl;
 	}
       else
 	{
 	  std::cout << "[LOOK]\t" << i << " : " << ((Toy*)this->_stack[i])->getTitle() << std::endl;
-	  ret[i] = ((Toy*)this->_stack[i])->getTitle();
+	  ret[i] = new std::string(((Toy*)this->_stack[i])->getTitle());
 	}
       i++;
     }
-  ret[10] = "null";
-  return (ret);
+  ret[10] = NULL;
+  return (*ret);
 }
 
 void		TablePePeNoel::Look(int idx) const
