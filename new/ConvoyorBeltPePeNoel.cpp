@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 // 
 // Started on  Sat Jan 17 11:51:55 2015 Joris Bertomeu
-// Last update Sat Jan 17 16:34:52 2015 Joris Bertomeu
+// Last update Sat Jan 17 17:36:41 2015 Joris Bertomeu
 //
 
 #include	<cstdlib>
@@ -26,11 +26,14 @@ ConvoyorBeltPePeNoel::~ConvoyorBeltPePeNoel()
 
 Wrap		*ConvoyorBeltPePeNoel::Take()
 {
+  Wrap		*ret;
+
   if (this->object) {
+    ret = this->object;
     this->object = NULL;
-    return (this->object);
+    return (ret);
   }
-  std::cout << "[ERROR]\tCan't return wrapper 'cause there is already an object on ConveyorBelt !" << std::endl;
+  std::cout << "[ERROR]\tCan't return wrapper 'cause there is no object on ConveyorBelt !" << std::endl;
   return (NULL);
 }
 
@@ -58,5 +61,11 @@ void		ConvoyorBeltPePeNoel::pressIn()
 
 void		ConvoyorBeltPePeNoel::pressOut()
 {
+  if (!this->object) {
+    std::cerr << "[ERROR]\tNoting put on ConveyorBelt" << std::endl;
+    return;
+  }
   std::cout << "[INFO]\tPressing Out .." << std::endl;
+  delete this->object;
+  this->object = NULL;
 }
