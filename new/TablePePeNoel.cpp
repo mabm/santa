@@ -1,19 +1,3 @@
-//
-// TablePePeNoel.cpp for TablePePeNoel in /home/barnea_v/rendu/santa
-//
-// Made by Viveka BARNEAUD
-// Login   <barnea_v@epitech.net>
-//
-// Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-<<<<<<< HEAD
-// Last update Sat Jan 17 18:29:31 2015 Joris Bertomeu
-=======
-// Last update Sat Jan 17 18:28:58 2015 Viveka BARNEAUD
->>>>>>> adc00a91b9b84e6f3cdb6fb1e36b8bf4ae7cd584
-// Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 16:43:20 2015 ades nicolas
-//
-
 #include	<iostream>
 #include	"TablePePeNoel.hh"
 #include	"Box.hh"
@@ -30,14 +14,13 @@ TablePePeNoel::TablePePeNoel()
       this->_stack[i] = NULL;
       i++;
     }
-  std::cout << "[INFO]\tInitialization of the table :" << std::endl;
   this->putObject(new Box());
   this->putObject(new Box());
   this->putObject(new GiftPaper());
   this->putObject(new GiftPaper());
   this->putObject(new LittlePony("Little Pony"));
   this->putObject(new Teddy("Teddy"));
-  std::cout << "[INFO]\tThe table is ready to make 2 gifts." << std::endl;
+  std::cout << "\033[36m[INFO]\tThe table is ready to make 2 gifts\033[0m" << std::endl;
 }
 
 TablePePeNoel::TablePePeNoel(TablePePeNoel const& other)
@@ -84,7 +67,7 @@ bool		TablePePeNoel::putObject(Object *o)
       if (this->_stack[i] == NULL)
 	{
 	  this->_stack[i] = o;
-	  std::cout << "[INFO]\tPutting the object in the slot " << i << std::endl;
+	  std::cout << "\033[36m[INFO]\tPutting the object in the slot " << i << "\033[0m" << std::endl;
 	  return (true);
 	}
       i++;

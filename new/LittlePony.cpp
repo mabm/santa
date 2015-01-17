@@ -5,14 +5,14 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:29:58 2015 Joris Bertomeu
-// Last update Sat Jan 17 14:38:04 2015 Joris Bertomeu
+// Last update Sat Jan 17 18:53:17 2015 Joris Bertomeu
 //
 
 #include	"LittlePony.hh"
 
 LittlePony::LittlePony(std::string name) : Toy(name, "LittlePony")
 {
-  std::cout << "[INFO]\tNew LittlePony Created !" << std::endl;
+  std::cout << "\033[36m[INFO]\tNew LittlePony Created !\033[0m" << std::endl;
 }
 
 LittlePony::~LittlePony()
@@ -27,5 +27,5 @@ void		LittlePony::isTaken() const
 
 std::ostream&	operator<<(std::ostream &os, LittlePony const & elem)
 {
-  return (os << "[INFO]\tThe LittlePony named [" << elem.getTitle() << "] is up to you.\n");
+  return (os << "\033[36m[INFO]\tThe LittlePony named [" << elem.getTitle() << "] is up to you.\033[0m" << std::endl);
 }

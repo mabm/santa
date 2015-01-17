@@ -1,17 +1,3 @@
-//
-// ConvoyorBeltPePeNoel.cpp for  in /home/jobertomeu/Work/piscine_cpp/santa
-//
-// Made by Joris Bertomeu
-// Login   <jobertomeu@epitech.net>
-//
-// Started on  Sat Jan 17 11:51:55 2015 Joris Bertomeu
-<<<<<<< HEAD
-// Last update Sat Jan 17 18:34:54 2015 Joris Bertomeu
-=======
-// Last update Sat Jan 17 18:28:44 2015 audisio romain
->>>>>>> adc00a91b9b84e6f3cdb6fb1e36b8bf4ae7cd584
-//
-
 #include	<cstdlib>
 #include	"Box.hh"
 #include	"GiftPaper.hh"

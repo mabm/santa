@@ -14,12 +14,12 @@ Object*		Wrap::takeMe() const
 Wrap::Wrap(std::string name, std::string type) : Object(name, type)
 {
   this->objectIn = NULL;
-  std::cout << "[INFO]\tCreating Wrap !" << std::endl;
+  std::cout << "\033[36m[INFO]\tCreating Wrap !\033[0m" << std::endl;
 }
 
 Wrap::~Wrap()
 {
-  std::cout << "[INFO]\tDestroying Wrap !" << std::endl;
+  std::cout << "\033[36m[INFO]\tDestroying Wrap !\033[0m" << std::endl;
 }
 
 bool	Wrap::wrapMeThat(Object toWrap)
@@ -50,9 +50,9 @@ Object		*Wrap::MyUnitTests(Object **tab)
 std::ostream&	operator<<(std::ostream &os, Wrap const & elem)
 {
   if (elem.takeMe())
-    return (os << "[INFO]\tThis Wrap contains something." << std::endl);
+    return (os << "\033[36m[INFO]\tThis Wrap contains something\033[0m" << std::endl);
   else
-    return (os << "[INFO]\tThis Wrap contains nothing." << std::endl);
+    return (os << "\033[36m[INFO]\tThis Wrap contains nothing\033[0m" << std::endl);
 }
 
 Wrap&		Wrap::operator=(Wrap const & elem)
