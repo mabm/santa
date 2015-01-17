@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:47:24 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 12:12:59 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 12:28:37 2015 Viveka BARNEAUD
 //
 
 #ifndef		TABLEPEPENOEL_HH_
@@ -22,7 +22,7 @@ public:
   TablePePeNoel(TablePePeNoel const& other);
   ~TablePePeNoel();
   TablePePeNoel	&operator=(TablePePeNoel const& other);
-  void		putObject(Object const *o);
+  void		putObject(Object *o);
   Object	*takeObject(int idx);
   Object	*takeObject();
   void		Look() const;
