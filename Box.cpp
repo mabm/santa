@@ -1,11 +1,11 @@
 //
 // Box.cpp for  in /home/jobertomeu/Work/piscine_cpp/rush2
-// 
+//
 // Made by Joris Bertomeu
 // Login   <jobertomeu@epitech.net>
-// 
+//
 // Started on  Sat Jan 17 00:18:58 2015 Joris Bertomeu
-// Last update Sat Jan 17 11:22:20 2015 Joris Bertomeu
+// Last update Sat Jan 17 12:06:08 2015 audisio romain
 //
 
 #include	"AToy.hh"
@@ -37,6 +37,7 @@ bool	Box::wrapMeThat(Object toWrap)
     return (showError("[ERROR]\tBox must be opened !", false));
   //showError("[INFO]\tWrapping object titled \"" << toWrap->getTitle() << \"", true);
   this->objectIn = &toWrap;
+  std::cout << "tuuuut tuuut tuut" << std::endl;
   return (true);
 }
 
@@ -55,4 +56,17 @@ bool	Box::closeMe()
   this->isOpened = false;
   std::cout << "[Warning] Box already closed !" << std::endl;
   return (false);
+}
+
+bool		Box::getIsOpen() const
+{
+  return (isOpened);
+}
+
+std::ostream&	operator<<(std::ostream & os, Box const & elem)
+{
+  if (elem.getIsOpen() == true)
+    return (os << "[INFO]\tThe box is open.\n");
+  else
+    return (os << "[INFO]\tThe box is closed\n");
 }
