@@ -11,8 +11,6 @@ Object*		Wrap::getObjectIn() const
   return this->objectIn;
 }
 
-Object		*Wrap::MyUnitTests(Object **tab)
-{
 Wrap::Wrap()
 {
   std::cout << "[INFO]\tCreating Wrap !" << std::endl;
