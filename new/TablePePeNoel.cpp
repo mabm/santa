@@ -115,7 +115,6 @@ std::string	*TablePePeNoel::Look() const
       if (this->_stack[i] == NULL)
 	{
 	  ret[i] = new std::string("empty");
-	  //ret[i] = "empty";
 	  std::cout << "[LOOK]\t" << i << " : empty" << std::endl;
 	}
       else
