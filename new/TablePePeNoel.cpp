@@ -18,8 +18,6 @@ TablePePeNoel::TablePePeNoel()
   this->putObject(new Box());
   this->putObject(new GiftPaper());
   this->putObject(new GiftPaper());
-  this->putObject(new LittlePony("Little Pony"));
-  this->putObject(new Teddy("Teddy"));
   std::cout << "\033[36m[INFO]\tThe table is ready to make 2 gifts\033[0m" << std::endl;
 }
 
