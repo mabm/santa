@@ -1,11 +1,11 @@
 //
 // IObject.hh for  in /home/jobertomeu/Work/piscine_cpp/rush2
-// 
+//
 // Made by Joris Bertomeu
 // Login   <jobertomeu@epitech.net>
-// 
+//
 // Started on  Fri Jan 16 23:37:42 2015 Joris Bertomeu
-// Last update Sat Jan 17 14:31:49 2015 Joris Bertomeu
+// Last update Sat Jan 17 15:06:19 2015 audisio romain
 //
 
 #ifndef		_OBJECT_HH_
@@ -23,6 +23,7 @@ public:
   virtual ~Object();
   std::string const& getName() const;
   std::string const& getTitle() const;
+  Object&	operator=(Object const &);
 };
 
 #endif		/* _OBJECT_HH_ */

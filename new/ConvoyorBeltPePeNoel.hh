@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 // 
 // Started on  Sat Jan 17 11:49:08 2015 Joris Bertomeu
-// Last update Sat Jan 17 12:09:42 2015 Joris Bertomeu
+// Last update Sat Jan 17 16:13:36 2015 Joris Bertomeu
 //
 
 #ifndef		_CONVOYERBELTPEPENOEL_HH_
@@ -21,7 +21,9 @@ class		ConvoyorBeltPePeNoel : public IConveyorBelt
  public:
   ConvoyorBeltPePeNoel();
   ~ConvoyorBeltPePeNoel();
-  Wrap		*pressIn();
+  Wrap		*Take();
+  bool		Put(Object *);
+  void		pressIn();
   void		pressOut();
 };
 

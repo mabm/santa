@@ -42,16 +42,8 @@ Object		*Wrap::MyUnitTests(Object **tab)
   box->openMe();
   box->wrapMeThat(*teddy);
   gift->wrapMeThat(*box);
-  // ((Box*) tab[1])->openMe();
-  // ((Box*) tab[1])->wrapMeThat(*tab[0]);
-  // ((GiftPaper*) tab[2])->wrapMeThat(*tab[1]);
-
   std::cout << "[UnitTest - Info] Let's test our Gift !" << std::endl;
   std::cout << "Name : " << teddy->getName() << std::endl;
-
-  // std::cout << "[UnitTest -  1  ] DeGifting our present to get Toy Name :"
-  // 	    << (std::string) ((AToy*) ((Box*) ((GiftPaper*) tab[2])->openMe())->openMe())->getTitle()
-  // 	    << std::endl;
   return (tab[2]);
 }
 
@@ -61,4 +53,12 @@ std::ostream&	operator<<(std::ostream &os, Wrap const & elem)
     return (os << "[INFO]\tThis Wrap contains something." << std::endl);
   else
     return (os << "[INFO]\tThis Wrap contains nothing." << std::endl);
+}
+
+Wrap&		Wrap::operator=(Wrap const & elem)
+{
+  _type = elem.getTitle();
+  _name = elem.getName();
+  objectIn = elem.takeMe();
+  return *this;
 }

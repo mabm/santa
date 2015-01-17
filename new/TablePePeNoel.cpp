@@ -1,12 +1,13 @@
 //
 // TablePePeNoel.cpp for TablePePeNoel in /home/barnea_v/rendu/santa
-// 
+//
 // Made by Viveka BARNEAUD
 // Login   <barnea_v@epitech.net>
-// 
+//
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 17:57:31 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 17:58:48 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 16:43:20 2015 ades nicolas
 //
 
 #include	<iostream>
@@ -23,7 +24,7 @@ TablePePeNoel::TablePePeNoel()
   while (i != 10)
     {
       this->_stack[i] = NULL;
-      i++; 
+      i++;
     }
   std::cout << "Initialization of the table :" << std::endl;
   this->putObject(new Box());
