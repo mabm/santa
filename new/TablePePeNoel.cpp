@@ -46,13 +46,13 @@ TablePePeNoel::~TablePePeNoel()
     }
 }
 
-int		TablePePeNoel::getFirst(Object *obj)
+int		TablePePeNoel::getFirst(std::string str)
 {
   int		i = 0;
 
   while (i != 10)
     {
-      if (this->_stack[i]->getTitle().compare(obj->getTitle()) == 0)
+      if (this->_stack[i]->getTitle().compare(str) == 0)
 	return (i);
       i++;
     }

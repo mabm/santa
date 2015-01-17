@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:47:24 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 21:28:33 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 21:52:47 2015 Joris Bertomeu
 // Last update Sat Jan 17 12:28:37 2015 Viveka BARNEAUD
 //
 
@@ -22,7 +22,7 @@ public:
   TablePePeNoel();
   TablePePeNoel(TablePePeNoel const& other);
   ~TablePePeNoel();
-  int		getFirst(Object *obj);
+  int		getFirst(std::string);
   TablePePeNoel	&operator=(TablePePeNoel const& other);
   bool		putObject(Object *o);
   Object	*takeObject(int idx);
