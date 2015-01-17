@@ -5,7 +5,7 @@ SRC	=	Toy.cpp	\
 		Teddy.cpp	\
 		Wrap.cpp	\
 		main.cpp	\
-		ConvoyorBeltPePeNoel.cpp \
+		ConveyorBeltPePeNoel.cpp \
 		Object.cpp \
 		TablePePeNoel.cpp
 
