@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:19:18 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 16:40:35 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 18:01:43 2015 Joris Bertomeu
 // Last update Sat Jan 17 12:28:54 2015 Viveka BARNEAUD
 //
 
@@ -23,7 +23,7 @@ public:
   virtual Object *takeObject() = 0;
   virtual std::string	*Look() const = 0;
   virtual void	Look(int x) const = 0;
-  virtual ITable	*createTable() = 0;
+  //virtual ITable	*createTable() = 0;
 };
 
 #endif		/* ITABLE_HH_ */

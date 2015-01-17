@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 //
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 17:58:48 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 18:04:17 2015 Joris Bertomeu
 // Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 16:43:20 2015 ades nicolas
 //
@@ -26,14 +26,14 @@ TablePePeNoel::TablePePeNoel()
       this->_stack[i] = NULL;
       i++;
     }
-  std::cout << "Initialization of the table :" << std::endl;
+  std::cout << "[INFO]\tInitialization of the table :" << std::endl;
   this->putObject(new Box());
   this->putObject(new Box());
   this->putObject(new GiftPaper());
   this->putObject(new GiftPaper());
   this->putObject(new LittlePony("Little Pony"));
   this->putObject(new Teddy("Teddy"));
-  std::cout << "The table is ready to make 2 gifts." << std::endl;
+  std::cout << "[INFO]\tThe table is ready to make 2 gifts." << std::endl;
 }
 
 TablePePeNoel::TablePePeNoel(TablePePeNoel const& other)
@@ -80,12 +80,12 @@ bool		TablePePeNoel::putObject(Object *o)
       if (this->_stack[i] == NULL)
 	{
 	  this->_stack[i] = o;
-	  std::cout << "Putting the object in the slot " << i << std::endl;
+	  std::cout << "[INFO]\tPutting the object in the slot " << i << std::endl;
 	  return (true);
 	}
       i++;
     }
-  std::cerr << "The table is already full : you can't put your object on it." << std::endl;
+  std::cerr << "[ERROR]\tThe table is already full : you can't put your object on it." << std::endl;
   return (false);
 }
 
@@ -93,7 +93,7 @@ Object		*TablePePeNoel::takeObject(int idx)
 {
   if (idx < 0 || idx >= 10 || this->_stack[idx] == NULL)
     {
-      std::cerr << "No such object at index " << idx << "." << std::endl;
+      std::cerr << "[ERROR]\tNo such object at index " << idx << "." << std::endl;
       return (NULL);
     }
   return (this->_stack[idx]);
@@ -125,11 +125,11 @@ std::string	*TablePePeNoel::Look() const
       if (this->_stack[i] == NULL)
 	{
 	  ret[i] = "empty";
-	  std::cout << i << " : empty" << std::endl;
+	  std::cout << "[LOOK]\t" << i << " : empty" << std::endl;
 	}
       else
 	{
-	  std::cout << i << " : " << ((Toy*)this->_stack[i])->getTitle() << std::endl;
+	  std::cout << "[LOOK]\t" << i << " : " << ((Toy*)this->_stack[i])->getTitle() << std::endl;
 	  ret[i] = ((Toy*)this->_stack[i])->getTitle();
 	}
       i++;
@@ -141,9 +141,9 @@ std::string	*TablePePeNoel::Look() const
 void		TablePePeNoel::Look(int idx) const
 {
   if (idx < 0 || idx >= 10 || this->_stack[idx] == NULL)
-    std::cout << "Slot " << idx << " is empty." << std::endl;
+    std::cout << "[LOOK]\t" << "Slot " << idx << " is empty." << std::endl;
   else
-    std::cout << "Slot " << idx << " contains " << ((Toy*)this->_stack[idx])->getTitle() << std::endl;
+    std::cout << "[LOOL]\tSlot " << idx << " contains " << ((Toy*)this->_stack[idx])->getTitle() << std::endl;
 }
 
 // ITable		*TablePePeNoel::createTable()
