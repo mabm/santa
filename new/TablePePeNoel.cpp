@@ -5,13 +5,13 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 15:50:23 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 16:20:29 2015 Joris Bertomeu
 // Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
 //
 
 #include	<iostream>
 #include	"TablePePeNoel.hh"
-#include	"AToy.hh"
+#include	"Toy.hh"
 #include	<iostream>
 #include	"TablePePeNoel.hh"
 #include	"Toy.hh"
