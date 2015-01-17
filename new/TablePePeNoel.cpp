@@ -5,7 +5,11 @@
 // Login   <barnea_v@epitech.net>
 //
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
+<<<<<<< HEAD
 // Last update Sat Jan 17 18:29:31 2015 Joris Bertomeu
+=======
+// Last update Sat Jan 17 18:28:58 2015 Viveka BARNEAUD
+>>>>>>> adc00a91b9b84e6f3cdb6fb1e36b8bf4ae7cd584
 // Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 16:43:20 2015 ades nicolas
 //
@@ -103,6 +107,7 @@ Object		*TablePePeNoel::takeObject()
 {
   int		i;
   int		idx;
+  Object	*tmp;
 
   i = 0;
   while (i != 10)
@@ -111,7 +116,9 @@ Object		*TablePePeNoel::takeObject()
 	idx = i;
       i++;
     }
-  return (this->_stack[idx]);
+  tmp = this->_stack[idx];
+  this->_stack[idx] = NULL;
+  return (tmp);
 }
 
 std::string	*TablePePeNoel::Look() const
@@ -147,7 +154,7 @@ void		TablePePeNoel::Look(int idx) const
     std::cout << "[LOOL]\tSlot " << idx << " contains " << ((Toy*)this->_stack[idx])->getTitle() << std::endl;
 }
 
-// ITable		*TablePePeNoel::createTable()
-// {
-//   return (new ITable());
-// }
+ITable		*TablePePeNoel::createTable()
+{
+  return (new TablePePeNoel());
+}
