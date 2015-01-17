@@ -5,9 +5,10 @@
 // Login   <jobertomeu@epitech.net>
 // 
 // Started on  Sat Jan 17 00:18:58 2015 Joris Bertomeu
-// Last update Sat Jan 17 01:28:14 2015 Joris Bertomeu
+// Last update Sat Jan 17 11:03:45 2015 Joris Bertomeu
 //
 
+#include	"AToy.hh"
 #include	"Box.hh"
 
 bool		Box::showError(std::string str, bool ret)
@@ -18,7 +19,7 @@ bool		Box::showError(std::string str, bool ret)
 
 Box::Box()
 {
-  std::cout << "[LOG] New Box created !" << std::endl;
+  std::cout << "[LOG]\tNew Box created !" << std::endl;
   this->isOpened = false;
   this->objectIn = NULL;
 }
@@ -32,6 +33,7 @@ bool	Box::wrapMeThat(Object toWrap)
 {
   if (!this->isOpened)
     return (showError("[ERROR] Box must be opened !", false));
+  showError("[INFO]\tWrapping object titled \"" << ((AToy) toWrap).getTitle() << \"", true);
   this->objectIn = &toWrap;
   return (true);
 }
