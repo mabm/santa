@@ -13,7 +13,7 @@ public:
   virtual bool		wrapMeThat(Object toWrap);
   Object		*MyUnitTests(Object **);
   Object*		takeMe() const;
- 
+  Wrap&			operator=(Wrap const &);
 };
 
 std::ostream&	operator<<(std::ostream &, Wrap const &);

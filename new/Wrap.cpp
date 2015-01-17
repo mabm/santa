@@ -51,10 +51,18 @@ Object		*Wrap::MyUnitTests(Object **tab)
   return (tab[2]);
 }
 
-std::ostream&	operator<<(std::ostream &, Wrap const & elem)
+std::ostream&	operator<<(std::ostream & os, Wrap const & elem)
 {
   if (elem.takeMe())
-    std::cout << "[INFO]\tThis Wrap contains something." << std::endl;
+    return (os << "[INFO]\tThis Wrap contains something." << std::endl);
   else
-    std::cout << "[INFO]\tThis Wrap contains nothing." << std::endl;
+    return (os << "[INFO]\tThis Wrap contains nothing." << std::endl);
+}
+
+Wrap&		Wrap::operator=(Wrap const & elem)
+{
+  _type = elem.getTitle();
+  _name = elem.getName();
+  objectIn = elem.takeMe();
+  return *this;
 }

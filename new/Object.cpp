@@ -22,7 +22,13 @@ std::string	const&	Object::getName() const
   return (this->_name);
 }
 
-std::string	const& Object::getTitle() const
+std::string	const&	Object::getTitle() const
 {
   return (this->_type);
+}
+
+Object&			Object::operator=(Object const & elem)
+{
+  _type = elem.getTitle();
+  _name = elem.getName();
 }
