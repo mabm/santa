@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 //
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 18:19:15 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 18:28:58 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 16:43:20 2015 ades nicolas
 //
@@ -150,7 +150,7 @@ void		TablePePeNoel::Look(int idx) const
     std::cout << "[LOOL]\tSlot " << idx << " contains " << ((Toy*)this->_stack[idx])->getTitle() << std::endl;
 }
 
-// ITable		*TablePePeNoel::createTable()
-// {
-//   return (new ITable());
-// }
+ITable		*TablePePeNoel::createTable()
+{
+  return (new TablePePeNoel());
+}
