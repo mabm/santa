@@ -7,6 +7,7 @@ SRC	=	Toy.cpp	\
 		main.cpp	\
 		ConvoyorBeltPePeNoel.cpp \
 		Object.cpp \
+		TablePePeNoel.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
 
