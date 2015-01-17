@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:47:24 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 21:52:47 2015 Joris Bertomeu
+// Last update Sat Jan 17 22:09:43 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 12:28:37 2015 Viveka BARNEAUD
 //
 
@@ -30,6 +30,7 @@ public:
   std::string	*Look() const;
   void		Look(int idx) const;
   ITable	*createTable();
+  bool		isFull() const;
 };
 
 #endif		/* TABLEPEPENOEL_HH_ */

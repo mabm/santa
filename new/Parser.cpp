@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 19:30:36 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 21:19:15 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 21:38:56 2015 Viveka BARNEAUD
 //
 
 #include	<iostream>
@@ -51,6 +51,5 @@ Object		*getObject(std::string const& buffer)
   Object	*ret;
   std::string	title;
   std::string	type;
-
 
 }

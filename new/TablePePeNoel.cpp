@@ -46,6 +46,19 @@ TablePePeNoel::~TablePePeNoel()
     }
 }
 
+bool		TablePePeNoel::isFull() const
+{
+  int		i = 0;
+
+  while (i != 10)
+    {
+      if (this->_stack[i] == NULL)
+	return (false);
+      i++;
+    }
+  return (true);
+}
+
 int		TablePePeNoel::getFirst(std::string str)
 {
   int		i = 0;
