@@ -46,6 +46,7 @@ TablePePeNoel::~TablePePeNoel()
     }
 }
 
+
 TablePePeNoel	&TablePePeNoel::operator=(TablePePeNoel const& other)
 {
   int		i = 0;
@@ -125,9 +126,7 @@ std::string	*TablePePeNoel::Look() const
 	}
       i++;
     }
-    std::cout << "TEST1" << std::endl;
   ret[10] = NULL;
-    std::cout << "TEST2" << std::endl;
   return (*ret);
 }
 
