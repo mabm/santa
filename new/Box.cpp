@@ -36,7 +36,7 @@ void	Box::openMe()
   if (this->isOpened)
     std::cout << "\033[35m[WARNING]\tBox already opened !\033[0m" << std::endl;
   this->isOpened = true;
-  std::cout << "\033[36m[Info]\tBox opened\033[36m" << std::endl;
+  std::cout << "\033[36m[Info]\tBox opened\033[0m" << std::endl;
 }
 
 void	Box::closeMe()

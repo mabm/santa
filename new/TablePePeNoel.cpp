@@ -63,9 +63,9 @@ int		TablePePeNoel::getFirst(std::string str)
 {
   int		i = 0;
 
-  while (i != 10)
+  while (i < 10)
     {
-      if (this->_stack[i]->getTitle().compare(str) == 0)
+      if (this->_stack[i] && !this->_stack[i]->getTitle().compare(str))
 	return (i);
       i++;
     }

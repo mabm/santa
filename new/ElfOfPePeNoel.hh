@@ -5,7 +5,7 @@
 // Login   <ades_n@epitech.net>
 //
 // Started on  Sat Jan 17 17:44:24 2015 ades nicolas
-// Last update Sat Jan 17 21:56:31 2015 Joris Bertomeu
+// Last update Sat Jan 17 22:33:56 2015 Joris Bertomeu
 //
 
 #ifndef		ELFOFPEPENOEL_H_
@@ -23,7 +23,7 @@ public:
   ElfOfPePeNoel();
   ElfOfPePeNoel(std::string name);
   ~ElfOfPePeNoel();
-  bool			checkPresent(TablePePeNoel table);
+  bool			checkPresent(TablePePeNoel *table);
   virtual void		start();
 };
 
