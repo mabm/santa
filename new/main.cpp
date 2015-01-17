@@ -5,7 +5,6 @@
 #include	"Box.hh"
 #include	"Teddy.hh"
 
-
 int		main()
 {
   Toy		toy("");
