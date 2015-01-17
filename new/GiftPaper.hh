@@ -9,7 +9,6 @@ public:
   GiftPaper();
   virtual	~GiftPaper();
   virtual bool	wrapMeThat(Object toWrap);
-  virtual Object	*openMe();
 };
 
 #endif		/* _GIFTPAPER_HH_ */

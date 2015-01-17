@@ -18,8 +18,3 @@ bool	GiftPaper::wrapMeThat(Object toWrap)
   std::cout << "tuuuut tuuut tuut" << std::endl;
   return (true);
 }
-
-Object	*GiftPaper::openMe()
-{
-   return (this->objectIn);
-}

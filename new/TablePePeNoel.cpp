@@ -5,13 +5,16 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 15:47:06 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 15:50:23 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
 //
 
 #include	<iostream>
 #include	"TablePePeNoel.hh"
 #include	"AToy.hh"
+#include	<iostream>
+#include	"TablePePeNoel.hh"
+#include	"Toy.hh"
 
 TablePePeNoel::TablePePeNoel()
 {
@@ -110,7 +113,7 @@ void		TablePePeNoel::Look() const
       if (this->_stack[i] == NULL)
 	std::cout << i << " : empty" << std::endl;
       else
-	std::cout << i << " : " << ((AToy*)this->_stack[i])->getTitle() << std::endl;
+	std::cout << i << " : " << ((Toy*)this->_stack[i])->getTitle() << std::endl;
       i++;
     }
 }
@@ -120,5 +123,5 @@ void		TablePePeNoel::Look(int idx) const
   if (idx < 0 || idx >= 10 || this->_stack[idx] == NULL)
     std::cout << "Slot " << idx << " is empty." << std::endl;
   else
-    std::cout << "Slot " << idx << " contains " << ((AToy*)this->_stack[idx])->getTitle() << std::endl;
+    std::cout << "Slot " << idx << " contains " << ((Toy*)this->_stack[idx])->getTitle() << std::endl;
 }
