@@ -5,7 +5,7 @@
 ## Login   <ades_n@epitech.net>
 ##
 ## Started on  Sat Jan 17 10:24:32 2015 ades nicolas
-## Last update Sat Jan 17 12:20:14 2015 Viveka BARNEAUD
+## Last update Sat Jan 17 12:22:31 2015 Viveka BARNEAUD
 ##
 
 SRC	=	AToy.cpp	\
@@ -23,14 +23,14 @@ NAME	=	Santa
 
 CXFLAGS +=	-Wall -Wextra -Werror
 
-CCX	=	clang++
+CXX	=	clang++
 
 RM	=	rm -rf
 
 all	:	$(NAME)
 
 $(NAME)	:	$(OBJ)
-		$(CCX) $(OBJ) -o $(NAME)
+		$(CXX) $(OBJ) -o $(NAME)
 
 clean	:
 		$(RM) $(OBJ)
