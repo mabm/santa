@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 12:19:39 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 12:25:00 2015 Joris Bertomeu
 //
 
 #include	<iostream>
@@ -14,7 +14,7 @@
 
 TablePePeNoel::TablePePeNoel()
 {
-  this->_stack = new Object *[10];
+  
 }
 
 TablePePeNoel::TablePePeNoel(TablePePeNoel const& other)
