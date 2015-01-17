@@ -1,11 +1,11 @@
 //
 // Toy.hh for  in /home/jobertomeu/Work/piscine_cpp/rush2
-// 
+//
 // Made by Joris Bertomeu
 // Login   <jobertomeu@epitech.net>
-// 
+//
 // Started on  Fri Jan 16 23:19:15 2015 Joris Bertomeu
-// Last update Sat Jan 17 00:57:59 2015 Joris Bertomeu
+// Last update Sat Jan 17 11:12:34 2015 audisio romain
 //
 
 #ifndef				_ATOY_HH_
@@ -25,6 +25,7 @@ public:
   virtual std::string const&	getTitle() const;
   virtual void			setTitle(std::string title);
   Object			**MyUnitTests();
+  virtual void			isTaken() const = 0;
 };
 
 #endif		/* _ATOY_HH_ */
