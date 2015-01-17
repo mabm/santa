@@ -5,7 +5,7 @@
 ## Login   <ades_n@epitech.net>
 ##
 ## Started on  Sat Jan 17 10:24:32 2015 ades nicolas
-## Last update Sat Jan 17 10:31:42 2015 ades nicolas
+## Last update Sat Jan 17 12:20:14 2015 Viveka BARNEAUD
 ##
 
 SRC	=	AToy.cpp	\
@@ -14,6 +14,7 @@ SRC	=	AToy.cpp	\
 		LittlePony.cpp	\
 		Teddy.cpp	\
 		Wrap.cpp	\
+		TablePePeNoel.cpp	\
 		main.cpp	\
 
 OBJ	=	$(SRC:.cpp=.o)
@@ -37,6 +38,6 @@ clean	:
 fclean	:	clean
 		$(RM) $(NAME)
 
-re	:	fclean re
+re	:	fclean all
 
 .PHONY	:	all clean fclean re

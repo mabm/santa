@@ -5,10 +5,12 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 12:05:50 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 12:19:39 2015 Viveka BARNEAUD
 //
 
+#include	<iostream>
 #include	"TablePePeNoel.hh"
+#include	"AToy.hh"
 
 TablePePeNoel::TablePePeNoel()
 {
@@ -17,7 +19,7 @@ TablePePeNoel::TablePePeNoel()
 
 TablePePeNoel::TablePePeNoel(TablePePeNoel const& other)
 {
-  this->_stack = other->getStack();
+  this->_stack = other->_stack;
 }
 
 TablePePeNoel::~TablePePeNoel()
@@ -32,18 +34,13 @@ TablePePeNoel::~TablePePeNoel()
     }
 }
 
-Object		*[10]TablePePeNoel::getStack() const
-{
-  return (this->_stack);
-}
-
 TablePePeNoel	&TablePePeNoel::operator=(TablePePeNoel const& other)
 {
-  this->_stack = other.getStack();
+  this->_stack = other._stack;
   return (*this);
 }
 
-void		TablePePeNoel::putObject(Object const& *o)
+void		TablePePeNoel::putObject(Object const *o)
 {
   int		i = 0;
 
@@ -83,7 +80,7 @@ Object		*TablePePeNoel::takeObject()
   return (this->_stack[idx]);
 }
 
-void		TablePePeNoel::Look()
+void		TablePePeNoel::Look() const
 {
   int		i;
 
@@ -93,15 +90,15 @@ void		TablePePeNoel::Look()
       if (this->_stack[i] == NULL)
 	std::cout << i << " : empty" << std::endl;
       else
-	std::cout << i << " : " << this->_stack[i]->getTitle() << std::endl;
+	std::cout << i << " : " << this->(AToy *)_stack[i]->getTitle() << std::endl;
       i++;
     }
 }
 
-void		TablePePeNoel::Look(int idx)
+void		TablePePeNoel::Look(int idx) const
 {
   if (idx < 0 || idx >= 10 || this->_stack[idx] == NULL)
     std::cout << "Slot " << idx << " is empty." << std::endl;
   else
-    std::cout << "Slot " << idx << " contains " << this->_stack[idx]->getTitle() << std::endl;
+    std::cout << "Slot " << idx << " contains " << this->(AToy *)_stack[idx]->getTitle() << std::endl;
 }
