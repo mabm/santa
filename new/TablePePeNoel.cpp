@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 //
 // Started on  Sat Jan 17 11:52:03 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 18:12:06 2015 Joris Bertomeu
+// Last update Sat Jan 17 18:19:15 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 12:32:13 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 16:43:20 2015 ades nicolas
 //
@@ -103,6 +103,7 @@ Object		*TablePePeNoel::takeObject()
 {
   int		i;
   int		idx;
+  Object	*tmp;
 
   i = 0;
   while (i != 10)
@@ -111,7 +112,9 @@ Object		*TablePePeNoel::takeObject()
 	idx = i;
       i++;
     }
-  return (this->_stack[idx]);
+  tmp = this->_stack[idx];
+  this->_stack[idx] = NULL;
+  return (tmp);
 }
 
 std::string	*TablePePeNoel::Look() const
