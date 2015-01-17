@@ -81,6 +81,7 @@ Object		*TablePePeNoel::takeObject(int idx)
       std::cerr << "\033[31m[ERROR]\tNo such object at index " << idx << "\033[0m" << std::endl;
       return (NULL);
     }
+  this->_stack[idx] = NULL;
   return (this->_stack[idx]);
 }
 
@@ -122,7 +123,9 @@ std::string	*TablePePeNoel::Look() const
 	}
       i++;
     }
+    std::cout << "TEST1" << std::endl;
   ret[10] = NULL;
+    std::cout << "TEST2" << std::endl;
   return (*ret);
 }
 

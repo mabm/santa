@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 19:30:36 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 19:47:06 2015 Viveka BARNEAUD
+// Last update Sat Jan 17 20:16:23 2015 Viveka BARNEAUD
 //
 
 #include	<iostream>
@@ -14,5 +14,26 @@
 void		createXML(Object *o)
 {
   static int	i = 1;
-  std::ofstream	file("gift"+i+".xml");
+  std::ostream	file("gift"+1+".xml");
+
+  if (!file.is_open())
+    {
+      std::cerr << "\033[31m[ERROR]\tCannot open the XML file !\033[0m" << std::endl;
+      return;
+    }
+  file << "<gift>" << std::endl;
+  file << "\t<box>" << std::endl;
+  file << "\t\t<toy type=\"" << ((Toy *) o->getType()) << "\">" << ((Toy *) o->getTitle()) << "</toy>" << std::endl;
+  file << "\t</box>" << std::endl;
+  file << "</gift>" << std::endl;
+  i++;
+  file.close();
+}
+
+Object		*readXML(std::string const& filename)
+{
+  std::ifstream	file(filename.c_str());
+  std::string	buffer;
+
+  
 }
