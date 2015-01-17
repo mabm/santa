@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 11:47:24 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 22:09:43 2015 Viveka BARNEAUD
+// Last update Sun Jan 18 00:22:43 2015 Viveka BARNEAUD
 // Last update Sat Jan 17 12:28:37 2015 Viveka BARNEAUD
 //
 
@@ -16,7 +16,7 @@
 
 class		TablePePeNoel : public ITable
 {
-private:
+protected:
   Object	*_stack[11];
 public:
   TablePePeNoel();
