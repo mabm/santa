@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:29:58 2015 Joris Bertomeu
-// Last update Sat Jan 17 11:21:36 2015 audisio romain
+// Last update Sat Jan 17 12:26:41 2015 audisio romain
 //
 
 #include	"LittlePony.hh"
@@ -23,4 +23,9 @@ LittlePony::~LittlePony()
 void		LittlePony::isTaken() const
 {
   std::cout << "yo man" << std::endl;
+}
+
+std::ostream&	operator<<(std::ostream &os, LittlePony const & elem)
+{
+  return (os << "[INFO]\tThe LittlePony named [" << elem.getTitle() << "] is up to you.\n");
 }

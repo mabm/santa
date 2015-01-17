@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:29:58 2015 Joris Bertomeu
-// Last update Sat Jan 17 11:21:57 2015 audisio romain
+// Last update Sat Jan 17 12:26:44 2015 audisio romain
 //
 
 #include	"Teddy.hh"
@@ -24,4 +24,9 @@ Teddy::~Teddy()
 void		Teddy::isTaken() const
 {
   std::cout << "gra hu" << std::endl;
+}
+
+std::ostream&	operator<<(std::ostream &os, Teddy const & elem)
+{
+  return (os << "[INFO]\tThe Teddy named [" << elem.getTitle() << "] is up to you.\n");
 }

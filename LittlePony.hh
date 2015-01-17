@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:23:30 2015 Joris Bertomeu
-// Last update Sat Jan 17 11:18:59 2015 audisio romain
+// Last update Sat Jan 17 12:25:03 2015 audisio romain
 //
 
 #ifndef			_LITTLEPONY_HH_
@@ -21,5 +21,7 @@ public:
 
   virtual void		isTaken() const;
 };
+
+std::ostream&	operator<<(std::ostream &, LittlePony const &);
 
 #endif		/* _LITTLEPONY_HH_ */

@@ -28,6 +28,7 @@ bool	Box::wrapMeThat(Object toWrap)
     return (showError("[ERROR]\tBox must be opened !", false));
   //showError("[INFO]\tWrapping object titled \"" << toWrap->getTitle() << \"", true);
   this->objectIn = &toWrap;
+  std::cout << "tuuuut tuuut tuut" << std::endl;
   return (true);
 }
 
@@ -46,4 +47,17 @@ bool	Box::closeMe()
   this->isOpened = false;
   std::cout << "[Warning] Box already closed !" << std::endl;
   return (false);
+}
+
+bool		Box::getIsOpen() const
+{
+  return (isOpened);
+}
+
+std::ostream&	operator<<(std::ostream & os, Box const & elem)
+{
+  if (elem.getIsOpen() == true)
+    return (os << "[INFO]\tThe box is open.\n");
+  else
+    return (os << "[INFO]\tThe box is closed\n");
 }
