@@ -1,5 +1,4 @@
-
-#include	"AToy.hh"
+#include	"Toy.hh"
 #include	"Teddy.hh"
 #include	"Box.hh"
 
@@ -9,7 +8,7 @@ bool		Box::showError(std::string str, bool ret)
   return (ret);
 }
 
-Box::Box()
+Box::Box() : Wrap("", "Box")
 {
   std::cout << "[LOG]\tNew Box created !" << std::endl;
   this->isOpened = false;
@@ -28,24 +27,23 @@ bool	Box::wrapMeThat(Object toWrap)
   if (!this->isOpened)
     return (showError("[ERROR]\tBox must be opened !", false));
   //showError("[INFO]\tWrapping object titled \"" << toWrap->getTitle() << \"", true);
-  std::cout << "[INFO]\tWrapping object \"" << ((Teddy) toWrap).getTitle() << "\" into Box" << std::
+  //std::cout << "[INFO]\tWrapping object \"" << ((Teddy) toWrap).getTitle() << "\" into Box" << std::
   this->objectIn = &toWrap;
   return (true);
 }
 
-Object	*Box::openMe()
+void	Box::openMe()
 {
   if (this->isOpened)
-    std::cout << "[Warning] Box already opened !" << std::endl;
+    std::cout << "[Warning]\tBox already opened !" << std::endl;
   this->isOpened = true;
-  return (this->objectIn);
+  std::cout << "[Info]\tBox opened" << std::endl;
 }
 
-bool	Box::closeMe()
+void	Box::closeMe()
 {
-  if (this->isOpened)
-    return (true);
+  if (!this->isOpened)
+    std::cout << "[Warning]\tBox already closed !" << std::endl;
   this->isOpened = false;
-  std::cout << "[Warning] Box already closed !" << std::endl;
-  return (false);
+  std::cout << "[Info]\tBox closed" << std::endl;
 }
