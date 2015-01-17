@@ -4,7 +4,7 @@ Object::Object(std::string name, std::string type)
 {
   this->_name = name;
   this->_type = type;
-  std::cout << "[INFO]\tCreating new Object of type " << this->_type << std::endl;
+  std::cout << "\033[32m[INFO]\033[0m\tCreating new Object with name \"" << name << "\" of type " << this->_type << std::endl;
 }
 
 Object::Object(std::string type)
