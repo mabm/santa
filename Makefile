@@ -5,6 +5,8 @@ SRC	=	AToy.cpp	\
 		Teddy.cpp	\
 		Wrap.cpp	\
 		main.cpp	\
+		ConvoyorBeltPePeNoel.cpp \
+		TablePePeNoel.cpp \
 
 OBJ	=	$(SRC:.cpp=.o)
 
@@ -27,6 +29,6 @@ clean	:
 fclean	:	clean
 		$(RM) $(NAME)
 
-re	:	fclean re
+re	:	fclean all
 
 .PHONY	:	all clean fclean re

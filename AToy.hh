@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:19:15 2015 Joris Bertomeu
-// Last update Sat Jan 17 11:12:34 2015 audisio romain
+// Last update Sat Jan 17 12:18:41 2015 Joris Bertomeu
 //
 
 #ifndef				_ATOY_HH_
@@ -25,7 +25,7 @@ public:
   virtual std::string const&	getTitle() const;
   virtual void			setTitle(std::string title);
   Object			**MyUnitTests();
-  virtual void			isTaken() const = 0;
+  virtual void			isTaken() const;
 };
 
 #endif		/* _ATOY_HH_ */
