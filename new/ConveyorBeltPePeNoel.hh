@@ -11,12 +11,12 @@ class		ConveyorBeltPePeNoel : public IConveyorBelt
  public:
   ConveyorBeltPePeNoel();
   ~ConveyorBeltPePeNoel();
-  Wrap		*Take();
-  bool		Put(Object *);
-  void		pressIn();
-  void		pressOut();
-  bool		checkGift(Object *) const;
-  IConveyorBelt	*createConveyorBelt();
+  virtual Wrap		*Take();
+  virtual bool		Put(Object *);
+  virtual void		pressIn();
+  virtual void		pressOut();
+  virtual bool		checkGift(Object *) const;
+  virtual IConveyorBelt	*createConveyorBelt();
 };
 
 #endif		/* _CONVOYERBELTPEPENOEL_HH_ */

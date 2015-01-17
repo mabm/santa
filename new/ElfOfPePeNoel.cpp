@@ -5,7 +5,7 @@
 // Login   <ades_n@epitech.net>
 //
 // Started on  Sat Jan 17 17:46:21 2015 ades nicolas
-// Last update Sat Jan 17 23:52:44 2015 Joris Bertomeu
+// Last update Sun Jan 18 00:36:10 2015 Joris Bertomeu
 //
 
 #include	"ElfOfPePeNoel.hh"
@@ -15,7 +15,7 @@
 #include	"Box.hh"
 #include	"Teddy.hh"
 #include	"TablePePeNoel.hh"
-#include	"ConveyorBeltPePeNoel.hh"
+#include	"ConveyorBeltRand.hh"
 
 
 ElfOfPePeNoel::ElfOfPePeNoel()
@@ -45,7 +45,7 @@ bool			ElfOfPePeNoel::checkPresent(TablePePeNoel *table)
 void			ElfOfPePeNoel::start()
 {
   TablePePeNoel		table;
-  ConveyorBeltPePeNoel	tapis;
+  ConveyorBeltRand	tapis;
   Box			*box;
   GiftPaper		*finished;
 
@@ -53,6 +53,7 @@ void			ElfOfPePeNoel::start()
   while (1)
     {
       if (!checkPresent(&table)) {
+	std::cout << "pepe ya un schmolle dans le bignou" << std::endl;
 	if (table.isFull())
 	  break;
 	tapis.pressIn();

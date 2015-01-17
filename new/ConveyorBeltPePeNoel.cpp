@@ -46,12 +46,13 @@ void		ConveyorBeltPePeNoel::pressIn()
   static	int toto = 0;
   
   srand(toto);
-  _random = rand() % 2;
+  _random = rand() % 3;
   toto++;
   if (_random == 0)
     this->object = new GiftPaper;
   else
     this->object = new Box;
+
   std::cout << "\033[36m[INFO]\tPressing IN ..\033[0m" << std::endl;
 }
 
