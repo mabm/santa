@@ -79,13 +79,16 @@ bool		TablePePeNoel::putObject(Object *o)
 
 Object		*TablePePeNoel::takeObject(int idx)
 {
+  Object	*tmp;
+
   if (idx < 0 || idx >= 10 || this->_stack[idx] == NULL)
     {
       std::cerr << "\033[31m[ERROR]\tNo such object at index " << idx << "\033[0m" << std::endl;
       return (NULL);
     }
+  tmp = this->_stack[idx];
   this->_stack[idx] = NULL;
-  return (this->_stack[idx]);
+  return (tmp);
 }
 
 Object		*TablePePeNoel::takeObject()
