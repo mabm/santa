@@ -11,10 +11,11 @@ private:
 public:
   explicit		Box();
   virtual		~Box();
-  virtual bool		wrapMeThat(Object toWrap);
+  virtual bool		wrapMeThat(Object *toWrap);
   void			openMe();
   void			closeMe();
   bool			getIsOpen() const;
+  std::string		getNameOfContent() const;
 };
 
 std::ostream&	operator<<(std::ostream &, Box const &);

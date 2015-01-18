@@ -8,7 +8,7 @@ class		GiftPaper : public Wrap
 public:
   GiftPaper();
   virtual	~GiftPaper();
-  virtual bool	wrapMeThat(Object toWrap);
+  virtual bool	wrapMeThat(Object *toWrap);
 };
 
 #endif		/* _GIFTPAPER_HH_ */

@@ -10,7 +10,7 @@ protected:
 public:
   explicit		Wrap(std::string, std::string);
   virtual		~Wrap();
-  virtual bool		wrapMeThat(Object toWrap);
+  virtual bool		wrapMeThat(Object *toWrap);
   Object		*MyUnitTests(Object **);
   Object*		takeMe() const;
   Wrap&			operator=(Wrap const &);

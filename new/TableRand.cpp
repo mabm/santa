@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sun Jan 18 00:24:33 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 00:38:28 2015 Viveka BARNEAUD
+// Last update Sun Jan 18 02:03:30 2015 Joris Bertomeu
 //
 
 #include	<cstdlib>
@@ -52,13 +52,6 @@ TableRand::TableRand(TableRand const& other)
 
 TableRand::~TableRand()
 {
-  int		i = 0;
 
-  while (i != 10)
-    {
-      if (this->_stack[i] != NULL)
-	delete (this->_stack[i]);
-      i++;
-    }
 }
 

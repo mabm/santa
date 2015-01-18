@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 23:03:36 2015 Viveka BARNEAUD
-// Last update Sat Jan 17 23:38:37 2015 Viveka BARNEAUD
+// Last update Sun Jan 18 00:59:53 2015 Joris Bertomeu
 //
 
 #ifndef		PARSERXML_HH_
@@ -15,8 +15,9 @@
 # include	<string>
 # include	<fstream>
 # include	"Object.hh"
-
-class		GiftPaper;
+# include	"GiftPaper.hh"
+# include	"Toy.hh"
+# include	"Box.hh"
 
 class		ParserXML
 {

@@ -8,6 +8,8 @@
 Object*		Wrap::takeMe() const
 {
   std::cout << "whistles while working" << std::endl;
+  if (!this->objectIn)
+    std::cout << "OBJECTIN NULL INTO WRAP" << std::endl;
   return (this->objectIn);
 }
 
@@ -22,10 +24,10 @@ Wrap::~Wrap()
   std::cout << "\033[36m[INFO]\tDestroying Wrap !\033[0m" << std::endl;
 }
 
-bool	Wrap::wrapMeThat(Object toWrap)
+bool	Wrap::wrapMeThat(Object *toWrap)
 {
   if (!this->objectIn) {
-    this->objectIn = &toWrap;
+    this->objectIn = toWrap;
     return (true);
   }
   return (false);
@@ -40,10 +42,9 @@ Object		*Wrap::MyUnitTests(Object **tab)
   std::cout << "[UnitTest - Info] Let's create a gift !" << std::endl;
 
   box->openMe();
-  box->wrapMeThat(*teddy);
-  gift->wrapMeThat(*box);
+  box->wrapMeThat(teddy);
+  gift->wrapMeThat(box);
   std::cout << "[UnitTest - Info] Let's test our Gift !" << std::endl;
-  std::cout << "Name : " << teddy->getName() << std::endl;
   return (tab[2]);
 }
 

@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 19:30:36 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 00:55:02 2015 Joris Bertomeu
+// Last update Sun Jan 18 02:14:02 2015 Joris Bertomeu
 //
 
 #include	<iostream>
@@ -24,7 +24,7 @@ ParserXML::~ParserXML()
 bool		ParserXML::OpenFile(std::string const& filename)
 {
   this->CloseFile();
-  this->_file.open(filename.c_str());
+  this->_file.open(filename.c_str(), std::fstream::in | std::fstream::out | std::fstream::trunc);
   if (!this->_file)
     {
       std::cerr << "\033[31m[ERROR]\tCannot open the XML file : " << filename << " !\033[0m" << std::endl;
@@ -41,9 +41,15 @@ void		ParserXML::CloseFile()
 
 void		ParserXML::Serialize(GiftPaper *gift)
 {
+  this->_file << "<?xml version=\"1.0\"?>" << std::endl << std::endl;
   this->_file << "<GiftPaper>" << std::endl;
   this->_file << "\t<Box>" << std::endl;
-  this->_file << "\t\t<Toy type=\"" << ((Toy *) gift->getType()) << "\">" << ((Toy *) gift->getTitle()) << "</Toy>" << std::endl;
+
+  this->_file << "\t\t<Toy type=\"" << ((std::string) ((Toy*) ((Box*)
+							       gift->takeMe())
+						       ->takeMe())->getTitle()) << "\">" << ((std::string) ((Toy*) ((Box*) gift
+														    ->takeMe())
+													    ->takeMe())->getName()) << "</Toy>" << std::endl;
   this->_file << "\t</Box>" << std::endl;
   this->_file << "</GiftPaper>" << std::endl;
 }
@@ -59,10 +65,11 @@ bool		ParserXML::getXMLbuffer()
 
 GiftPaper	**ParserXML::DeSerialize()
 {
-  GiftPaper	*ret = new GiftPaper()[this->CountGifts + 1];
+  //GiftPaper	*ret = new GiftPaper()[this->CountGifts + 1];
 
   
-  return (ret);
+  //return (ret);
+  return (NULL);
 }
 
 int		ParserXML::CountGifts() const
@@ -72,7 +79,7 @@ int		ParserXML::CountGifts() const
 
   while (pos <= this->_buffer.npos)
     {
-      if (pos = this->_buffer.find("<GiftPaper>", pos) != this->_buffer.npos)
+      if ((pos = this->_buffer.find("<GiftPaper>", pos)) != this->_buffer.npos)
 	count++;
     }
   return (count);

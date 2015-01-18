@@ -15,9 +15,9 @@ ConveyorBeltPePeNoel::~ConveyorBeltPePeNoel()
   std::cout << "\033[36m[INFO]\tDestroying ConvoyerBelt !\033[0m" << std::endl;
 }
 
-Wrap		*ConveyorBeltPePeNoel::Take()
+Object		*ConveyorBeltPePeNoel::Take()
 {
-  Wrap		*ret;
+  Object	*ret;
 
   if (this->object) {
     ret = this->object;
@@ -35,9 +35,9 @@ bool		ConveyorBeltPePeNoel::Put(Object *_object)
       std::cerr << "\033[31m[ERROR]\tCan't put object on ConveyorBelt 'cause there is already an object\033[0m" << std::endl;
       return (false);
     }
-  this->object = (Wrap*) _object;
+  this->object = _object;
   std::cout << "\033[36m[INFO]\tPutting object on ConveyorBelt\033[0m" << std::endl;
-  return (false);
+  return (true);
 }
 
 void		ConveyorBeltPePeNoel::pressIn()

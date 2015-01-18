@@ -5,7 +5,7 @@
 // Login   <ades_n@epitech.net>
 //
 // Started on  Sat Jan 17 17:46:21 2015 ades nicolas
-// Last update Sun Jan 18 00:36:10 2015 Joris Bertomeu
+// Last update Sun Jan 18 02:17:24 2015 Joris Bertomeu
 //
 
 #include	"ElfOfPePeNoel.hh"
@@ -14,7 +14,7 @@
 #include	"GiftPaper.hh"
 #include	"Box.hh"
 #include	"Teddy.hh"
-#include	"TablePePeNoel.hh"
+#include	"TableRand.hh"
 #include	"ConveyorBeltRand.hh"
 
 
@@ -44,10 +44,11 @@ bool			ElfOfPePeNoel::checkPresent(TablePePeNoel *table)
 
 void			ElfOfPePeNoel::start()
 {
-  TablePePeNoel		table;
+  TableRand		table;
   ConveyorBeltRand	tapis;
   Box			*box;
   GiftPaper		*finished;
+  int			i = 0;
 
   table.Look();
   while (1)
@@ -65,11 +66,13 @@ void			ElfOfPePeNoel::start()
 	continue;
       }
       box->openMe();
-      if (box->wrapMeThat((Object)*(table.takeObject(table.getFirst("Toy"))))) {
+      if (box->wrapMeThat((Object*)(table.takeObject(table.getFirst("Toy"))))) {
 	finished = (GiftPaper*) table.takeObject(table.getFirst("GiftPaper"));
-	finished->wrapMeThat(*box);  
-	tapis.Put(box);
+	finished->wrapMeThat(box);
+	tapis.Put(finished);
+	tapis.Zwify(i);
 	tapis.pressOut();
+	i++;
       }
     }
   table.Look();

@@ -7,9 +7,11 @@ SRC	=	Toy.cpp	\
 		Wrap.cpp	\
 		main.cpp	\
 		ConveyorBeltPePeNoel.cpp \
+		ConveyorBeltRand.cpp \
 		Object.cpp \
 		TablePePeNoel.cpp \
 		TableRand.cpp	\
+		ParserXML.cpp
 
 OBJ	=	$(SRC:.cpp=.o)
 
