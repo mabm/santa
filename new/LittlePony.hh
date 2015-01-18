@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:23:30 2015 Joris Bertomeu
-// Last update Sat Jan 17 14:09:51 2015 Joris Bertomeu
+// Last update Sun Jan 18 02:57:14 2015 ades nicolas
 //
 
 #ifndef			_LITTLEPONY_HH_
@@ -14,13 +14,15 @@
 
 class			LittlePony : public Toy
 {
+
 public:
+
   LittlePony(std::string title);
   virtual ~LittlePony();
 
   virtual void		isTaken() const;
 };
 
-std::ostream&	operator<<(std::ostream &, LittlePony const &);
+std::ostream&		operator<<(std::ostream &, LittlePony const &);
 
 #endif		/* _LITTLEPONY_HH_ */

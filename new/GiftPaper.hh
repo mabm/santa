@@ -5,9 +5,12 @@
 
 class		GiftPaper : public Wrap
 {
+
 public:
+
   GiftPaper();
   virtual	~GiftPaper();
+
   virtual bool	wrapMeThat(Object *toWrap);
 };
 

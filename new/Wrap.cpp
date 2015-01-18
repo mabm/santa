@@ -5,14 +5,6 @@
 #include	"Box.hh"
 #include	"Teddy.hh"
 
-Object*		Wrap::takeMe() const
-{
-  std::cout << "whistles while working" << std::endl;
-  if (!this->objectIn)
-    std::cout << "OBJECTIN NULL INTO WRAP" << std::endl;
-  return (this->objectIn);
-}
-
 Wrap::Wrap(std::string name, std::string type) : Object(name, type)
 {
   this->objectIn = NULL;
@@ -24,7 +16,16 @@ Wrap::~Wrap()
   std::cout << "\033[36m[INFO]\tDestroying Wrap !\033[0m" << std::endl;
 }
 
-bool	Wrap::wrapMeThat(Object *toWrap)
+Object*		Wrap::takeMe() const
+{
+  std::cout << "whistles while working" << std::endl;
+  if (!this->objectIn)
+    std::cout << "OBJECTIN NULL INTO WRAP" << std::endl;
+  return (this->objectIn);
+}
+
+
+bool		Wrap::wrapMeThat(Object *toWrap)
 {
   if (!this->objectIn) {
     this->objectIn = toWrap;

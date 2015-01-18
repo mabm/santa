@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:26:36 2015 Joris Bertomeu
-// Last update Sun Jan 18 02:31:51 2015 ades nicolas
+// Last update Sun Jan 18 03:00:29 2015 ades nicolas
 //
 
 #include	"Toy.hh"
@@ -27,7 +27,7 @@ Toy::~Toy()
 
 }
 
-Object	**Toy::MyUnitTests()
+Object		**Toy::MyUnitTests()
 {
   Object	**tab;
 

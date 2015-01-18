@@ -6,11 +6,16 @@
 
 class		ConveyorBeltPePeNoel : public IConveyorBelt
 {
+
  protected:
+
   Object	*object;
+
  public:
+
   ConveyorBeltPePeNoel();
   ~ConveyorBeltPePeNoel();
+
   virtual Object	*Take();
   virtual bool		Put(Object *);
   virtual void		pressIn();
