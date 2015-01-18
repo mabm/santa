@@ -5,18 +5,22 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Sat Jan 17 11:47:12 2015 Joris Bertomeu
-// Last update Sat Jan 17 16:41:52 2015 audisio romain
+// Last update Sun Jan 18 02:55:50 2015 ades nicolas
 //
 
 #ifndef		_ICONVOYERBELT_HH_
 # define	_ICONVOYERBELT_HH_
 # include	"Object.hh"
 
-class IConveyorBelt
+class		IConveyorBelt
 {
+
 protected:
+
   Object	*currentObject;
+
 public:
+
   virtual ~IConveyorBelt() {}
 
 };

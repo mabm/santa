@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 //
 // Started on  Sun Jan 18 00:21:03 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 02:31:29 2015 ades nicolas
+// Last update Sun Jan 18 02:59:51 2015 ades nicolas
 //
 
 #ifndef		TABLERAND_HH_
@@ -15,7 +15,9 @@
 
 class		TableRand : public TablePePeNoel
 {
+
 public:
+
   TableRand();
   TableRand(TableRand const& other);
   ~TableRand();

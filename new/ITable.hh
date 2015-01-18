@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 //
 // Started on  Sat Jan 17 11:19:18 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 02:29:50 2015 ades nicolas
+// Last update Sun Jan 18 02:56:44 2015 ades nicolas
 // Last update Sat Jan 17 12:28:54 2015 Viveka BARNEAUD
 //
 
@@ -14,16 +14,20 @@
 
 # include	"Object.hh"
 
-class		ITable
+class			ITable
 {
+
 public:
-  virtual ~ITable() {}
-  virtual int	getFirst(std::string) = 0;
-  virtual bool	putObject(Object *o) = 0;
-  virtual Object *takeObject(int idx) = 0;
-  virtual Object *takeObject() = 0;
+
+  virtual		~ITable() {}
+
+  virtual int		getFirst(std::string) = 0;
+
+  virtual bool		putObject(Object *o) = 0;
+  virtual Object	*takeObject(int idx) = 0;
+  virtual Object	*takeObject() = 0;
   virtual std::string	*Look() const = 0;
-  virtual void	Look(int x) const = 0;
+  virtual void		Look(int x) const = 0;
   virtual ITable	*createTable() = 0;
   virtual bool		isFull() const = 0;
 };

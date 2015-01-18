@@ -2,11 +2,14 @@
 # define	_CONVEYORBELTRAND_HH_
 # include	"ConveyorBeltPePeNoel.hh"
 
-class ConveyorBeltRand : public ConveyorBeltPePeNoel
+class		ConveyorBeltRand : public ConveyorBeltPePeNoel
 {
+
 public:
+
   ConveyorBeltRand();
   virtual ~ConveyorBeltRand();
+
   bool		Zwify(int);
 };
 

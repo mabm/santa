@@ -2,12 +2,6 @@
 #include	"Teddy.hh"
 #include	"Box.hh"
 
-bool		Box::showError(std::string str, bool ret)
-{
-  std::cerr << str << std::endl;
-  return (ret);
-}
-
 Box::Box() : Wrap("", "Box")
 {
   std::cout << "\033[36m[INFO]\tNew Box created !\033[0m" << std::endl;
@@ -20,7 +14,14 @@ Box::~Box()
 
 }
 
-bool	Box::wrapMeThat(Object *toWrap)
+bool		Box::showError(std::string str, bool ret)
+{
+  std::cerr << str << std::endl;
+  return (ret);
+}
+
+
+bool		Box::wrapMeThat(Object *toWrap)
 {
   if (this->objectIn)
     return (showError("\033[31m[ERROR]\tBox containing already something !\033[0m", false));
@@ -33,7 +34,7 @@ bool	Box::wrapMeThat(Object *toWrap)
   return (true);
 }
 
-void	Box::openMe()
+void		Box::openMe()
 {
   if (this->isOpened)
     std::cout << "\033[35m[WARNING]\tBox already opened !\033[0m" << std::endl;
@@ -41,7 +42,7 @@ void	Box::openMe()
   std::cout << "\033[36m[Info]\tBox opened\033[0m" << std::endl;
 }
 
-void	Box::closeMe()
+void		Box::closeMe()
 {
   if (!this->isOpened)
     std::cout << "\033[35m[WARNING]\tBox already closed !\033[0m" << std::endl;

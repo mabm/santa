@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:23:30 2015 Joris Bertomeu
-// Last update Sat Jan 17 14:06:33 2015 Joris Bertomeu
+// Last update Sun Jan 18 03:00:15 2015 ades nicolas
 //
 
 #ifndef		_TEDDY_HH_
@@ -13,8 +13,9 @@
 # include	<iostream>
 # include	"Toy.hh"
 
-class Teddy : public Toy
+class		Teddy : public Toy
 {
+
 public:
 
   explicit	Teddy(std::string title);
