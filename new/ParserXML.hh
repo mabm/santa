@@ -22,6 +22,7 @@ public:
   void		Serialize(GiftPaper *gift);
   GiftPaper	*DeSerialize();
   bool		OpenFile(std::string const& filename);
+  bool		OpenFile(std::string const& filename, int);
   void		CloseFile();
   int		CountGifts() const;
 };

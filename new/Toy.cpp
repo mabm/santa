@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:26:36 2015 Joris Bertomeu
-// Last update Sun Jan 18 02:31:51 2015 ades nicolas
+// Last update Sun Jan 18 04:21:24 2015 Joris Bertomeu
 //
 
 #include	"Toy.hh"
@@ -52,5 +52,5 @@ Object	**Toy::MyUnitTests()
 
 void		Toy::isTaken() const
 {
-
+  std::cout << "Bad isTaken Bro !" << std::endl;
 }

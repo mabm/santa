@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:19:15 2015 Joris Bertomeu
-// Last update Sat Jan 17 14:43:09 2015 Joris Bertomeu
+// Last update Sun Jan 18 04:21:27 2015 Joris Bertomeu
 //
 
 #ifndef				_TOY_HH_

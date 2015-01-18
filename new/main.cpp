@@ -31,19 +31,19 @@ int		main()
 {
   ElfOfPePeNoel	elf("Tom");
 
-   elf.start();
-  TableRand	*table = new TableRand();
-  table->Look();
-  Toy		toy("");
-  Object	**tab = new Object*[3];
-  GiftPaper	*present = new GiftPaper();
+  elf.start();
+  // TableRand	*table = new TableRand();
+  // table->Look();
+  // Toy		toy("");
+  // Object	**tab = new Object*[3];
+  // GiftPaper	*present = new GiftPaper();
 
-  tab[0] = (Object*) new Teddy("Joris");
-  tab[1] = (Object*) new Box();
-  tab[2] = (Object*) new GiftPaper();
+  // tab[0] = (Object*) new Teddy("Joris");
+  // tab[1] = (Object*) new Box();
+  // tab[2] = (Object*) new GiftPaper();
 
-  toy.MyUnitTests();
-  std::cout << "Test 2" << std::endl;
-  present = (GiftPaper*) present->MyUnitTests(tab);
-  TableUnitTest();
+  // toy.MyUnitTests();
+  // std::cout << "Test 2" << std::endl;
+  // present = (GiftPaper*) present->MyUnitTests(tab);
+  // TableUnitTest();
 }

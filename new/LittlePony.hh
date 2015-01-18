@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:23:30 2015 Joris Bertomeu
-// Last update Sat Jan 17 14:09:51 2015 Joris Bertomeu
+// Last update Sun Jan 18 04:23:48 2015 Joris Bertomeu
 //
 
 #ifndef			_LITTLEPONY_HH_
@@ -17,7 +17,6 @@ class			LittlePony : public Toy
 public:
   LittlePony(std::string title);
   virtual ~LittlePony();
-
   virtual void		isTaken() const;
 };
 

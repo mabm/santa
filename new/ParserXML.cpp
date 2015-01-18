@@ -24,6 +24,18 @@ bool		ParserXML::OpenFile(std::string const& filename)
   return (true);
 }
 
+bool		ParserXML::OpenFile(std::string const& filename, int mode)
+{
+  this->CloseFile();
+  this->_file.open(filename.c_str());
+  if (!this->_file)
+    {
+      std::cerr << "\033[31m[ERROR]\tCannot open the XML file : " << filename << " !\033[0m" << std::endl;
+      return (false);
+    }
+  return (true);
+}
+
 void		ParserXML::CloseFile()
 {
   if (this->_file)
@@ -57,21 +69,38 @@ bool		ParserXML::getXMLbuffer()
 
 GiftPaper	*ParserXML::DeSerialize()
 {
-<<<<<<< HEAD
   GiftPaper	*ret = new GiftPaper();
+  Toy		*myToy;
+  Box		*myBox = new Box();;
+  std::string	type = "";
+  std::string	name = "";
+  bool		GP = false, box = false;
+
   for (std::string line; getline(this->_file, line);)
     {
-      std::cout << line << std::endl;
+      if (line.find("version") != std::string::npos)
+	std::cout << "Good Version !" << std::endl;
+      if (line.find("<GiftPaper>") != std::string::npos)
+	GP = true;
+      else if (line.find("<Box>") != std::string::npos && GP)
+	box = true;
+      else if (line.find("<Toy ") != std::string::npos && box) {
+	if (line.find("</Toy>") == std::string::npos)
+	  std::cerr << "Toy not closed" << std::endl;
+	if (line.find("type=\"") != std::string::npos)
+	  type = line.substr(line.find("type=\"") + 6, line.find("\">")-(line.find("type=\"") + 6));
+	name = line.substr(line.find("\">") + 2, line.find("</Toy>")-(line.find("\">") + 2));
+	std::cout << "Type : " << type << " - Name : " << name << std::endl;
+      } else if (line.find("</GiftPaper>") != std::string::npos && !box)
+	GP = false;
+      else if (line.find("</Box>") != std::string::npos)
+	box = false;
     }
-  
+  myToy = new Toy(name, type);
+  myBox->openMe();
+  myBox->wrapMeThat(myToy);
+  ret->wrapMeThat(myBox);
   return (ret);
-=======
-  //GiftPaper	*ret = new GiftPaper()[this->CountGifts + 1];
-
-
-  //return (ret);
-  return (NULL);
->>>>>>> 38d0ca1f7552646449c71aa0b574b3abd243bfeb
 }
 
 int		ParserXML::CountGifts() const
