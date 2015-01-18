@@ -1,11 +1,11 @@
 //
 // TableRand.cpp for TableRand in /home/barnea_v/rendu/santa/new
-// 
+//
 // Made by Viveka BARNEAUD
 // Login   <barnea_v@epitech.net>
-// 
+//
 // Started on  Sun Jan 18 00:24:33 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 02:03:30 2015 Joris Bertomeu
+// Last update Sun Jan 18 02:31:23 2015 ades nicolas
 //
 
 #include	<cstdlib>
@@ -54,4 +54,3 @@ TableRand::~TableRand()
 {
 
 }
-

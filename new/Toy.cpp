@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:26:36 2015 Joris Bertomeu
-// Last update Sat Jan 17 14:42:39 2015 Joris Bertomeu
+// Last update Sun Jan 18 02:31:51 2015 ades nicolas
 //
 
 #include	"Toy.hh"
@@ -14,12 +14,12 @@
 
 Toy::Toy(std::string name, std::string type) : Object(name, type)
 {
-  
+
 }
 
 Toy::Toy(std::string name) : Object(name, "Toy")
 {
-  
+
 }
 
 Toy::~Toy()

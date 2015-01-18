@@ -19,7 +19,7 @@ bool			ConveyorBeltRand::Zwify(int i)
   std::string		filename;
 
   ss << i;
-  filename = "gift" + ss.str() + ".xml"; 
+  filename = "gift" + ss.str() + ".xml";
   if (!parser->OpenFile(filename))
     std::cerr << "\033[31m[ERROR]\t Error while opening file\033[0m" << std::endl;
   if (!this->object)

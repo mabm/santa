@@ -5,7 +5,7 @@
 // Login   <jobertomeu@epitech.net>
 //
 // Started on  Fri Jan 16 23:29:58 2015 Joris Bertomeu
-// Last update Sat Jan 17 22:15:09 2015 Joris Bertomeu
+// Last update Sun Jan 18 02:31:36 2015 ades nicolas
 //
 
 #include	"Teddy.hh"

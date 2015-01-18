@@ -1,11 +1,11 @@
 //
 // Parser.cpp for Parser in /home/barnea_v/rendu/santa/new
-// 
+//
 // Made by Viveka BARNEAUD
 // Login   <barnea_v@epitech.net>
-// 
+//
 // Started on  Sat Jan 17 19:30:36 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 00:55:02 2015 Joris Bertomeu
+// Last update Sun Jan 18 02:30:16 2015 ades nicolas
 //
 
 #include	<iostream>
@@ -61,7 +61,7 @@ GiftPaper	**ParserXML::DeSerialize()
 {
   GiftPaper	*ret = new GiftPaper()[this->CountGifts + 1];
 
-  
+
   return (ret);
 }
 

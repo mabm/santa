@@ -1,12 +1,3 @@
-//
-// ParserXML.hh for ParserXML in /home/barnea_v/rendu/santa/new
-// 
-// Made by Viveka BARNEAUD
-// Login   <barnea_v@epitech.net>
-// 
-// Started on  Sat Jan 17 23:03:36 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 02:32:05 2015 Joris Bertomeu
-//
 
 #ifndef		PARSERXML_HH_
 # define	PARSERXML_HH_
