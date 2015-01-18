@@ -1,11 +1,11 @@
 //
 // TableRand.hh for TableRand in /home/barnea_v/rendu/santa/new
-// 
+//
 // Made by Viveka BARNEAUD
 // Login   <barnea_v@epitech.net>
-// 
+//
 // Started on  Sun Jan 18 00:21:03 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 00:24:15 2015 Viveka BARNEAUD
+// Last update Sun Jan 18 02:31:29 2015 ades nicolas
 //
 
 #ifndef		TABLERAND_HH_

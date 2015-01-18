@@ -44,7 +44,7 @@ void		ConveyorBeltPePeNoel::pressIn()
 {
   int		_random;
   static	int toto = 0;
-  
+
   srand(toto);
   _random = rand() % 3;
   toto++;
