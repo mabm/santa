@@ -1,16 +1,3 @@
-//
-// AToy.cpp for  in /home/jobertomeu/Work/piscine_cpp/rush2
-//
-// Made by Joris Bertomeu
-// Login   <jobertomeu@epitech.net>
-//
-// Started on  Fri Jan 16 23:26:36 2015 Joris Bertomeu
-<<<<<<< HEAD
-// Last update Sun Jan 18 04:21:24 2015 Joris Bertomeu
-=======
-// Last update Sun Jan 18 03:00:29 2015 ades nicolas
->>>>>>> a642075bfc4c17af2bb60805a1ba4a43dc78d182
-//
 
 #include	"Toy.hh"
 #include	"Teddy.hh"

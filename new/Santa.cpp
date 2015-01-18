@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sun Jan 18 01:09:38 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 04:23:12 2015 Joris Bertomeu
+// Last update Sun Jan 18 05:02:38 2015 Joris Bertomeu
 //
 
 #include	"ParserXML.hh"
@@ -21,7 +21,6 @@ void		getGift(std::string const& filename)
   if (!parser->OpenFile(filename, 0))
     return;
   gift = parser->DeSerialize();
-  std::cout << " TYPE : " << ((Object*) ((Box*) gift->takeMe())->takeMe())->getTitle() << std::endl;
   if (!((Object*) ((Box*) gift->takeMe())->takeMe())->getTitle().compare("Teddy"))
     ((Teddy*) ((Box*) gift->takeMe())->takeMe())->isTaken();
   else if (!((Object*) ((Box*) gift->takeMe())->takeMe())->getTitle().compare("LittlePony"))

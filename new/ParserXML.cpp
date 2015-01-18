@@ -2,6 +2,8 @@
 #include	<iostream>
 #include	<fstream>
 #include	"ParserXML.hh"
+#include	"Teddy.hh"
+#include	"LittlePony.hh"
 
 ParserXML::ParserXML()
 {
@@ -69,8 +71,8 @@ bool		ParserXML::getXMLbuffer()
 
 GiftPaper	*ParserXML::DeSerialize()
 {
+  Object	*myToy;
   GiftPaper	*ret = new GiftPaper();
-  Toy		*myToy;
   Box		*myBox = new Box();;
   std::string	type = "";
   std::string	name = "";
@@ -86,17 +88,21 @@ GiftPaper	*ParserXML::DeSerialize()
 	box = true;
       else if (line.find("<Toy ") != std::string::npos && box) {
 	if (line.find("</Toy>") == std::string::npos)
-	  std::cerr << "Toy not closed" << std::endl;
+	  std::cerr << "Toy balise not closed" << std::endl;
 	if (line.find("type=\"") != std::string::npos)
 	  type = line.substr(line.find("type=\"") + 6, line.find("\">")-(line.find("type=\"") + 6));
 	name = line.substr(line.find("\">") + 2, line.find("</Toy>")-(line.find("\">") + 2));
-	std::cout << "Type : " << type << " - Name : " << name << std::endl;
       } else if (line.find("</GiftPaper>") != std::string::npos && !box)
 	GP = false;
       else if (line.find("</Box>") != std::string::npos)
 	box = false;
     }
-  myToy = new Toy(name, type);
+  if (!type.compare("Teddy"))
+    myToy = new Teddy(name);
+  else if (!type.compare("LittlePony"))
+    myToy = new LittlePony(name);
+  else
+    myToy = new Toy(name, type);
   myBox->openMe();
   myBox->wrapMeThat(myToy);
   ret->wrapMeThat(myBox);
