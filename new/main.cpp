@@ -7,6 +7,7 @@
 #include	"Teddy.hh"
 #include	"TablePePeNoel.hh"
 #include	"ConveyorBeltPePeNoel.hh"
+#include	"TableRand.hh"
 
 // void			TableUnitTest()
 // {
@@ -30,7 +31,9 @@ int		main()
 {
   ElfOfPePeNoel	elf("Tom");
 
-  elf.start();
+  // elf.start();
+  TableRand	*table = new TableRand();
+  table->Look();
   // Toy		toy("");
   // Object	**tab = new Object*[3];
   // GiftPaper	*present = new GiftPaper();
