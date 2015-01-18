@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 23:03:36 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 00:59:53 2015 Joris Bertomeu
+// Last update Sun Jan 18 02:32:05 2015 Joris Bertomeu
 //
 
 #ifndef		PARSERXML_HH_
@@ -29,7 +29,7 @@ public:
   ParserXML();
   ~ParserXML();
   void		Serialize(GiftPaper *gift);
-  GiftPaper	**DeSerialize();
+  GiftPaper	*DeSerialize();
   bool		OpenFile(std::string const& filename);
   void		CloseFile();
   int		CountGifts() const;

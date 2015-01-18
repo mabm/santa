@@ -5,7 +5,7 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sat Jan 17 19:30:36 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 02:14:02 2015 Joris Bertomeu
+// Last update Sun Jan 18 02:30:02 2015 Joris Bertomeu
 //
 
 #include	<iostream>
@@ -45,11 +45,12 @@ void		ParserXML::Serialize(GiftPaper *gift)
   this->_file << "<GiftPaper>" << std::endl;
   this->_file << "\t<Box>" << std::endl;
 
-  this->_file << "\t\t<Toy type=\"" << ((std::string) ((Toy*) ((Box*)
-							       gift->takeMe())
-						       ->takeMe())->getTitle()) << "\">" << ((std::string) ((Toy*) ((Box*) gift
-														    ->takeMe())
-													    ->takeMe())->getName()) << "</Toy>" << std::endl;
+  this->_file << "\t\t<Toy type=\"" <<
+    ((std::string) ((Toy*) ((Box*) gift->takeMe())->
+		    takeMe())->getTitle()) << "\">" <<
+    ((std::string) ((Toy*) ((Box*) gift->takeMe())->
+		    takeMe())->getName()) << "</Toy>" <<
+    std::endl;
   this->_file << "\t</Box>" << std::endl;
   this->_file << "</GiftPaper>" << std::endl;
 }
@@ -63,13 +64,15 @@ bool		ParserXML::getXMLbuffer()
   return (true);
 }
 
-GiftPaper	**ParserXML::DeSerialize()
+GiftPaper	*ParserXML::DeSerialize()
 {
-  //GiftPaper	*ret = new GiftPaper()[this->CountGifts + 1];
-
+  GiftPaper	*ret = new GiftPaper();
+  for (std::string line; getline(this->_file, line);)
+    {
+      std::cout << line << std::endl;
+    }
   
-  //return (ret);
-  return (NULL);
+  return (ret);
 }
 
 int		ParserXML::CountGifts() const

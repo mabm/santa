@@ -5,8 +5,11 @@
 // Login   <barnea_v@epitech.net>
 // 
 // Started on  Sun Jan 18 01:09:38 2015 Viveka BARNEAUD
-// Last update Sun Jan 18 01:15:37 2015 Viveka BARNEAUD
+// Last update Sun Jan 18 02:32:45 2015 Joris Bertomeu
 //
+
+#include	"ParserXML.hh"
+#include	"GiftPaper.hh"
 
 void		getGift(std::string const& filename)
 {
