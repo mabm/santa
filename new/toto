@@ -1,0 +1,21 @@
+# Debian Wheezy
+# Dépôt principal qui suffit à lui tout seul à faire l'installation de base
+deb http://ftp.fr.debian.org/debian/ wheezy main non-free contrib
+deb-src http://ftp.fr.debian.org/debian/ wheezy main non-free contrib
+
+# Wheezy - security
+# Mises à jour de sécurité à installer rapidement
+deb http://security.debian.org/ wheezy/updates main contrib non-free
+deb-src http://security.debian.org/ wheezy/updates main contrib non-free
+
+# Wheezy - updates
+# Dépôt pour logiciels nécessitant des mises à jour fréquentes et opportunes
+deb http://ftp.fr.debian.org/debian/ wheezy-updates main non-free contrib
+deb-src http://ftp.fr.debian.org/debian/ wheezy-updates main non-free contrib
+
+# Wheezy - rétroportages
+# Paquets en provenance de la prochaine version mais adaptés pour s’intégrer sur votre système stable
+deb http://ftp.debian.org/debian/ wheezy-backports main contrib non-free
+
+# Pour avoir la dernière version de firefox
+deb http://mozilla.debian.net/ wheezy-backports iceweasel-release
