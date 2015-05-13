@@ -1,21 +1,22 @@
-# Debian Wheezy
-# Dépôt principal qui suffit à lui tout seul à faire l'installation de base
-deb http://ftp.fr.debian.org/debian/ wheezy main non-free contrib
-deb-src http://ftp.fr.debian.org/debian/ wheezy main non-free contrib
-
-# Wheezy - security
-# Mises à jour de sécurité à installer rapidement
-deb http://security.debian.org/ wheezy/updates main contrib non-free
-deb-src http://security.debian.org/ wheezy/updates main contrib non-free
-
-# Wheezy - updates
-# Dépôt pour logiciels nécessitant des mises à jour fréquentes et opportunes
-deb http://ftp.fr.debian.org/debian/ wheezy-updates main non-free contrib
-deb-src http://ftp.fr.debian.org/debian/ wheezy-updates main non-free contrib
-
-# Wheezy - rétroportages
-# Paquets en provenance de la prochaine version mais adaptés pour s’intégrer sur votre système stable
-deb http://ftp.debian.org/debian/ wheezy-backports main contrib non-free
-
-# Pour avoir la dernière version de firefox
-deb http://mozilla.debian.net/ wheezy-backports iceweasel-release
+$TTL 3600
+@ IN SOA ksXXXXXXXX.kimsufi.com. root.falaf.net. (
+                        2013090601 ; SERIAL
+                        172800; REFRESH
+                        900; RETRY
+                        1209600; EXPIRE
+                        600 ) ; Negative Cache TTL
+ 
+falaf.net. IN NS ksXXXXXXXX.kimsufi.com.
+falaf.net. IN NS ns.kimsufi.com.
+ 
+www IN A XXX.XX.XXX.XX
+mail IN A XXX.XX.XXX.XX
+ns1 IN A XXX.XX.XXX.XX
+smtp IN A XXX.XX.XXX.XX
+pop IN A XXX.XX.XXX.XX
+ftp IN A XXX.XX.XXX.XX
+imap IN A XXX.XX.XXX.XX
+falaf.net. IN A XXX.XX.XXX.XX
+falaf.net. IN MX 10 mail.falaf.net.
+ 
+*.falaf.net. IN A XXX.XX.XXX.XX
